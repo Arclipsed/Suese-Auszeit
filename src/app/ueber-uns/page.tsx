@@ -20,39 +20,6 @@ export async function generateMetadata(): Promise<Metadata> {
   return MetaTagService.CreateMetaTags(t.AboutPage.MetaTags);
 }
 
-const MENU_DROPDOWN_ITEMS = [
-  {
-    title: "Kaffee & Barista-Kreationen",
-    description: "Espresso, Flat White, Cold Brew und saisonale Kaffee-Spezialitäten.",
-    badge: "Bio Bohnen",
-    href: "/speisekarte",
-  },
-  {
-    title: "Torten & Patisserie",
-    description: "Täglich frisch gebackene Kuchen, Törtchen und feine Macarons.",
-    badge: "Frisch",
-    href: "/speisekarte",
-  },
-  {
-    title: "Frühstück & Brunch",
-    description: "Artisan-Brot, Croissants, hausgemachte Aufstriche und Bowls.",
-    href: "/speisekarte",
-  },
-  {
-    title: "Erfrischungen & Signature Drinks",
-    description: "Pink Dragon Limo, hausgemachte Eistees und Bio-Kräutertees.",
-    badge: "Special",
-    href: "/speisekarte",
-  },
-];
-
-const MENU_HIGHLIGHT = {
-  tag: "Signature Empfehlung",
-  title: "Ruby Rose Latte & Himbeer-Pistazien Törtchen",
-  description: "Zartrosa Rote-Bete-Hafer-Latte harmonisch abgestimmt mit samtiger Patisserie.",
-  href: "/speisekarte",
-};
-
 export default async function UeberUnsPage() {
   const t = await TranslationService.GetUserTranslations();
 
@@ -73,7 +40,7 @@ export default async function UeberUnsPage() {
               aboutLabel={t.Navigation.AboutLabel}
               contactLabel={t.Navigation.ContactLabel}
               reserveLabel={t.Navigation.ReserveLabel}
-              menuItems={MENU_DROPDOWN_ITEMS}
+              menuItems={t.Navigation.DropdownItems}
             />
           </>
         }
@@ -81,8 +48,8 @@ export default async function UeberUnsPage() {
         <NavigationItem href="/" label={t.Navigation.HomeLabel} />
         <NavigationDropdownItem
           label={t.Navigation.MenuLabel}
-          items={MENU_DROPDOWN_ITEMS}
-          highlight={MENU_HIGHLIGHT}
+          items={t.Navigation.DropdownItems}
+          highlight={t.Navigation.DropdownHighlight}
         />
         <NavigationItem href="/ueber-uns" label={t.Navigation.AboutLabel} isActive />
         <NavigationItem href="/kontakt" label={t.Navigation.ContactLabel} />
@@ -111,6 +78,9 @@ export default async function UeberUnsPage() {
         ))}
 
         <AboutCtaSection
+          badge={t.AboutPage.Cta.badge}
+          title={t.AboutPage.Cta.title}
+          description={t.AboutPage.Cta.description}
           reserveLabel={t.Navigation.ReserveLabel}
           menuLabel={t.Navigation.MenuLabel}
         />

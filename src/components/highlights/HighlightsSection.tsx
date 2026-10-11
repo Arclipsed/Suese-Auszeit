@@ -1,44 +1,36 @@
 import { Coffee, Cake, Clock, Heart } from "lucide-react";
 
-const HIGHLIGHTS = [
-  {
-    icon: Coffee,
-    title: "Specialty Coffee",
-    desc: "Single-Origin Bohnen, aromaschonend geröstet und von Baristas zubereitet.",
-  },
-  {
-    icon: Cake,
-    title: "Frische Backkunst",
-    desc: "Hausgemachte Törtchen, Kuchen und Desserts mit Liebe zubereitet.",
-  },
-  {
-    icon: Clock,
-    title: "Lounge & Chill",
-    desc: "Gemütliche Sitzbereiche für entspannte Treffen, Dates oder Arbeit.",
-  },
-  {
-    icon: Heart,
-    title: "Herzliche Gastfreundschaft",
-    desc: "Eine Wohlfühloase mit moderner Musik und entspannter Atmosphäre.",
-  },
-] as const;
+interface HighlightsSectionProps {
+  conceptTag: string;
+  conceptTitle: string;
+  highlights: Array<{
+    title: string;
+    desc: string;
+  }>;
+}
 
-export default function HighlightsSection() {
+const ICONS = [Coffee, Cake, Clock, Heart];
+
+export default function HighlightsSection({
+  conceptTag,
+  conceptTitle,
+  highlights,
+}: HighlightsSectionProps) {
   return (
     <section className="py-20 bg-[#121015]/80 border-y border-pink-500/15 relative">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <span className="text-xs uppercase font-bold tracking-widest text-pink-400">
-            Das Konzept
+            {conceptTag}
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white mt-2">
-            Warum die „Süße Auszeit“ begeistert
+            {conceptTitle}
           </h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {HIGHLIGHTS.map((item) => {
-            const Icon = item.icon;
+          {highlights.map((item, index) => {
+            const Icon = ICONS[index % ICONS.length];
             return (
               <div
                 key={item.title}

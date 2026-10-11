@@ -7,6 +7,18 @@ export interface ITranslation {
     AboutLabel: string;
     ContactLabel: string;
     ReserveLabel: string;
+    DropdownItems: Array<{
+      title: string;
+      description: string;
+      badge?: string;
+      href: string;
+    }>;
+    DropdownHighlight: {
+      tag: string;
+      title: string;
+      description: string;
+      href: string;
+    };
   };
 
   HomePage: {
@@ -16,6 +28,16 @@ export interface ITranslation {
     Description: string;
     PrimaryCta: string;
     SecondaryCta: string;
+    ConceptTag: string;
+    ConceptTitle: string;
+    Highlights: Array<{
+      title: string;
+      desc: string;
+    }>;
+    PreviewBadge: string;
+    PreviewTitle: string;
+    PreviewSubtitle: string;
+    PreviewCta: string;
   };
 
   MenuPage: {
@@ -23,6 +45,7 @@ export interface ITranslation {
     Headline: string;
     Subheadline: string;
     AllCategories: string;
+    Categories: Record<string, string>;
   };
 
   ContactPage: {
@@ -45,6 +68,11 @@ export interface ITranslation {
       imageSrc: string;
       imageAlt: string;
     }>;
+    Cta: {
+      badge: string;
+      title: string;
+      description: string;
+    };
   };
 
   LegalPage: {

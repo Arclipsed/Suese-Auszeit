@@ -18,39 +18,6 @@ export async function generateMetadata(): Promise<Metadata> {
   return MetaTagService.CreateMetaTags(t.LegalPage.MetaTags);
 }
 
-const MENU_DROPDOWN_ITEMS = [
-  {
-    title: "Kaffee & Barista-Kreationen",
-    description: "Espresso, Flat White, Cold Brew und saisonale Kaffee-Spezialitäten.",
-    badge: "Bio Bohnen",
-    href: "/speisekarte",
-  },
-  {
-    title: "Torten & Patisserie",
-    description: "Täglich frisch gebackene Kuchen, Törtchen und feine Macarons.",
-    badge: "Frisch",
-    href: "/speisekarte",
-  },
-  {
-    title: "Frühstück & Brunch",
-    description: "Artisan-Brot, Croissants, hausgemachte Aufstriche und Bowls.",
-    href: "/speisekarte",
-  },
-  {
-    title: "Erfrischungen & Signature Drinks",
-    description: "Pink Dragon Limo, hausgemachte Eistees und Bio-Kräutertees.",
-    badge: "Special",
-    href: "/speisekarte",
-  },
-];
-
-const MENU_HIGHLIGHT = {
-  tag: "Signature Empfehlung",
-  title: "Ruby Rose Latte & Himbeer-Pistazien Törtchen",
-  description: "Zartrosa Rote-Bete-Hafer-Latte harmonisch abgestimmt mit samtiger Patisserie.",
-  href: "/speisekarte",
-};
-
 export default async function ImpressumPage() {
   const t = await TranslationService.GetUserTranslations();
 
@@ -71,7 +38,7 @@ export default async function ImpressumPage() {
               aboutLabel={t.Navigation.AboutLabel}
               contactLabel={t.Navigation.ContactLabel}
               reserveLabel={t.Navigation.ReserveLabel}
-              menuItems={MENU_DROPDOWN_ITEMS}
+              menuItems={t.Navigation.DropdownItems}
             />
           </>
         }
@@ -79,14 +46,14 @@ export default async function ImpressumPage() {
         <NavigationItem href="/" label={t.Navigation.HomeLabel} />
         <NavigationDropdownItem
           label={t.Navigation.MenuLabel}
-          items={MENU_DROPDOWN_ITEMS}
-          highlight={MENU_HIGHLIGHT}
+          items={t.Navigation.DropdownItems}
+          highlight={t.Navigation.DropdownHighlight}
         />
         <NavigationItem href="/ueber-uns" label={t.Navigation.AboutLabel} />
-        <NavigationItem href="/#kontakt" label={t.Navigation.ContactLabel} />
+        <NavigationItem href="/kontakt" label={t.Navigation.ContactLabel} />
       </Navigation>
 
-      <main className="flex-1 w-full">
+      <main className="flex-1 w-full pb-16">
         <LegalContentSection
           headline={t.LegalPage.Headline}
           subheadline={t.LegalPage.Subheadline}

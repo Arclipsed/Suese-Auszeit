@@ -11,7 +11,6 @@ import MobileNavigation from "@/components/navigation/MobileNavigation";
 import HeroSection from "@/components/hero/HeroSection";
 import HighlightsSection from "@/components/highlights/HighlightsSection";
 import MenuPreviewSection from "@/components/menu/MenuPreviewSection";
-import ContactSection from "@/components/contact/ContactSection";
 import FooterSection from "@/components/footer/FooterSection";
 
 export const instant = false;
@@ -20,39 +19,6 @@ export async function generateMetadata(): Promise<Metadata> {
   const t = await TranslationService.GetUserTranslations();
   return MetaTagService.CreateMetaTags(t.HomePage.MetaTags);
 }
-
-const MENU_DROPDOWN_ITEMS = [
-  {
-    title: "Kaffee & Barista-Kreationen",
-    description: "Espresso, Flat White, Cold Brew und saisonale Kaffee-Spezialitäten.",
-    badge: "Bio Bohnen",
-    href: "/speisekarte",
-  },
-  {
-    title: "Torten & Patisserie",
-    description: "Täglich frisch gebackene Kuchen, Törtchen und feine Macarons.",
-    badge: "Frisch",
-    href: "/speisekarte",
-  },
-  {
-    title: "Frühstück & Brunch",
-    description: "Artisan-Brot, Croissants, hausgemachte Aufstriche und Bowls.",
-    href: "/speisekarte",
-  },
-  {
-    title: "Erfrischungen & Signature Drinks",
-    description: "Pink Dragon Limo, hausgemachte Eistees und Bio-Kräutertees.",
-    badge: "Special",
-    href: "/speisekarte",
-  },
-];
-
-const MENU_HIGHLIGHT = {
-  tag: "Signature Empfehlung",
-  title: "Ruby Rose Latte & Himbeer-Pistazien Törtchen",
-  description: "Zartrosa Rote-Bete-Hafer-Latte harmonisch abgestimmt mit samtiger Patisserie.",
-  href: "/speisekarte",
-};
 
 export default async function Home() {
   const t = await TranslationService.GetUserTranslations();
@@ -65,7 +31,7 @@ export default async function Home() {
           <>
             <div className="hidden sm:flex items-center gap-3">
               <NavigationVerticalLine className="h-5 w-px bg-stone-800" />
-              <NavigationReserveButton label={t.Navigation.ReserveLabel} href="#reservierung" />
+              <NavigationReserveButton label={t.Navigation.ReserveLabel} href="/#reservierung" />
             </div>
 
             <MobileNavigation
@@ -74,7 +40,7 @@ export default async function Home() {
               aboutLabel={t.Navigation.AboutLabel}
               contactLabel={t.Navigation.ContactLabel}
               reserveLabel={t.Navigation.ReserveLabel}
-              menuItems={MENU_DROPDOWN_ITEMS}
+              menuItems={t.Navigation.DropdownItems}
             />
           </>
         }
@@ -82,8 +48,8 @@ export default async function Home() {
         <NavigationItem href="/" label={t.Navigation.HomeLabel} isActive />
         <NavigationDropdownItem
           label={t.Navigation.MenuLabel}
-          items={MENU_DROPDOWN_ITEMS}
-          highlight={MENU_HIGHLIGHT}
+          items={t.Navigation.DropdownItems}
+          highlight={t.Navigation.DropdownHighlight}
         />
         <NavigationItem href="/ueber-uns" label={t.Navigation.AboutLabel} />
         <NavigationItem href="/kontakt" label={t.Navigation.ContactLabel} />
@@ -97,14 +63,16 @@ export default async function Home() {
           primaryCta={t.HomePage.PrimaryCta}
           secondaryCta={t.HomePage.SecondaryCta}
         />
-        <HighlightsSection />
-        <MenuPreviewSection />
-        <ContactSection
-          headline={t.ContactPage.Headline}
-          subheadline={t.ContactPage.Subheadline}
-          address={t.Footer.Address}
-          phone={t.Footer.Phone}
-          email={t.Footer.Email}
+        <HighlightsSection
+          conceptTag={t.HomePage.ConceptTag}
+          conceptTitle={t.HomePage.ConceptTitle}
+          highlights={t.HomePage.Highlights}
+        />
+        <MenuPreviewSection
+          badge={t.HomePage.PreviewBadge}
+          title={t.HomePage.PreviewTitle}
+          subtitle={t.HomePage.PreviewSubtitle}
+          ctaText={t.HomePage.PreviewCta}
         />
       </main>
 

@@ -6,7 +6,11 @@ import MenuItemCard from "@/components/ui/MenuItemCard";
 import { ALL_MENU_ITEMS, MENU_CATEGORIES } from "@/lib/menuData";
 import { cn } from "@/lib/utils";
 
-export default function MenuCategoryView() {
+interface MenuCategoryViewProps {
+  categories?: Record<string, string>;
+}
+
+export default function MenuCategoryView({ categories }: MenuCategoryViewProps) {
   const [selectedCategory, setSelectedCategory] = useState<string>("alle");
 
   const filteredItems =
@@ -20,6 +24,8 @@ export default function MenuCategoryView() {
       <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
         {MENU_CATEGORIES.map((cat) => {
           const isActive = selectedCategory === cat.id;
+          const displayLabel = categories?.[cat.id] ?? cat.label;
+
           return (
             <button
               key={cat.id}
@@ -31,7 +37,7 @@ export default function MenuCategoryView() {
                   : "border border-white/10 bg-white/[0.03] text-stone-300 hover:bg-white/[0.08] hover:text-white"
               )}
             >
-              {cat.label}
+              {displayLabel}
             </button>
           );
         })}

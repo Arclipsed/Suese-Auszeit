@@ -1,11 +1,17 @@
 import Link from "next/link";
 
 interface AboutCtaSectionProps {
+  badge: string;
+  title: string;
+  description: string;
   reserveLabel: string;
   menuLabel: string;
 }
 
 export default function AboutCtaSection({
+  badge,
+  title,
+  description,
   reserveLabel,
   menuLabel,
 }: AboutCtaSectionProps) {
@@ -22,16 +28,15 @@ export default function AboutCtaSection({
       <div className="relative mx-auto max-w-4xl px-4 sm:px-6 text-center">
         <div className="rounded-3xl border border-pink-500/20 bg-gradient-to-b from-[#18151e] to-[#121015] p-8 sm:p-14 shadow-2xl backdrop-blur-xl">
           <span className="text-xs uppercase tracking-widest text-pink-400 font-semibold">
-            Herzlich Willkommen
+            {badge}
           </span>
 
           <h2 className="mt-3 text-2xl sm:text-4xl font-bold text-white tracking-tight">
-            Bereit für Ihre persönliche süße Auszeit?
+            {title}
           </h2>
 
           <p className="mt-4 text-stone-300 max-w-xl mx-auto text-sm sm:text-base leading-relaxed">
-            Kommen Sie vorbei, nehmen Sie Platz und lassen Sie sich von unserem Team mit
-            duftendem Kaffee und handgefertigter Patisserie verwöhnen.
+            {description}
           </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">

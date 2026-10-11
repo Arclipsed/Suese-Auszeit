@@ -8,7 +8,6 @@ import NavigationDropdownItem from "@/components/navigation/NavigationDropdownIt
 import NavigationVerticalLine from "@/components/navigation/NavigationVerticalLine";
 import NavigationReserveButton from "@/components/navigation/NavigationReserveButton";
 import MobileNavigation from "@/components/navigation/MobileNavigation";
-import MenuHeroSection from "@/components/menu/MenuHeroSection";
 import MenuCategoryView from "@/components/menu/MenuCategoryView";
 import FooterSection from "@/components/footer/FooterSection";
 
@@ -18,39 +17,6 @@ export async function generateMetadata(): Promise<Metadata> {
   const t = await TranslationService.GetUserTranslations();
   return MetaTagService.CreateMetaTags(t.MenuPage.MetaTags);
 }
-
-const MENU_DROPDOWN_ITEMS = [
-  {
-    title: "Kaffee & Barista-Kreationen",
-    description: "Espresso, Flat White, Cold Brew und saisonale Kaffee-Spezialitäten.",
-    badge: "Bio Bohnen",
-    href: "/speisekarte",
-  },
-  {
-    title: "Torten & Patisserie",
-    description: "Täglich frisch gebackene Kuchen, Törtchen und feine Macarons.",
-    badge: "Frisch",
-    href: "/speisekarte",
-  },
-  {
-    title: "Frühstück & Brunch",
-    description: "Artisan-Brot, Croissants, hausgemachte Aufstriche und Bowls.",
-    href: "/speisekarte",
-  },
-  {
-    title: "Erfrischungen & Signature Drinks",
-    description: "Pink Dragon Limo, hausgemachte Eistees und Bio-Kräutertees.",
-    badge: "Special",
-    href: "/speisekarte",
-  },
-];
-
-const MENU_HIGHLIGHT = {
-  tag: "Signature Empfehlung",
-  title: "Ruby Rose Latte & Himbeer-Pistazien Törtchen",
-  description: "Zartrosa Rote-Bete-Hafer-Latte harmonisch abgestimmt mit samtiger Patisserie.",
-  href: "/speisekarte",
-};
 
 export default async function SpeisekartePage() {
   const t = await TranslationService.GetUserTranslations();
@@ -72,7 +38,7 @@ export default async function SpeisekartePage() {
               aboutLabel={t.Navigation.AboutLabel}
               contactLabel={t.Navigation.ContactLabel}
               reserveLabel={t.Navigation.ReserveLabel}
-              menuItems={MENU_DROPDOWN_ITEMS}
+              menuItems={t.Navigation.DropdownItems}
             />
           </>
         }
@@ -80,19 +46,30 @@ export default async function SpeisekartePage() {
         <NavigationItem href="/" label={t.Navigation.HomeLabel} />
         <NavigationDropdownItem
           label={t.Navigation.MenuLabel}
-          items={MENU_DROPDOWN_ITEMS}
-          highlight={MENU_HIGHLIGHT}
+          items={t.Navigation.DropdownItems}
+          highlight={t.Navigation.DropdownHighlight}
         />
         <NavigationItem href="/ueber-uns" label={t.Navigation.AboutLabel} />
-        <NavigationItem href="/#kontakt" label={t.Navigation.ContactLabel} />
+        <NavigationItem href="/kontakt" label={t.Navigation.ContactLabel} />
       </Navigation>
 
-      <main className="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24 w-full">
-        <MenuHeroSection
-          headline={t.MenuPage.Headline}
-          subheadline={t.MenuPage.Subheadline}
-        />
-        <MenuCategoryView />
+      <main className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+        {/* Header Section */}
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="inline-flex items-center gap-2 rounded-full border border-pink-500/30 bg-pink-500/10 px-4 py-1.5 text-xs font-semibold text-pink-300 backdrop-blur-md mb-4 shadow-[0_0_15px_rgba(255,77,148,0.2)]">
+            <span className="inline-block h-1.5 w-1.5 rounded-full bg-pink-400 animate-pulse" />
+            Patisserie & Kaffeebar
+          </div>
+          <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mb-4">
+            {t.MenuPage.Headline}
+          </h1>
+          <p className="text-stone-300 text-sm sm:text-base leading-relaxed">
+            {t.MenuPage.Subheadline}
+          </p>
+        </div>
+
+        {/* Menu Interactive Category Filter & List */}
+        <MenuCategoryView categories={t.MenuPage.Categories} />
       </main>
 
       <FooterSection

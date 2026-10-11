@@ -7,6 +7,37 @@ export const EN: ITranslation = {
     AboutLabel: "About Us",
     ContactLabel: "Hours & Location",
     ReserveLabel: "Reserve Table",
+    DropdownItems: [
+      {
+        title: "Coffee & Barista Creations",
+        description: "Espresso, Flat White, Cold Brew, and seasonal specialty drinks.",
+        badge: "Organic",
+        href: "/speisekarte",
+      },
+      {
+        title: "Cakes & Patisserie",
+        description: "Freshly baked artisanal cakes, tarts, and delicate macarons.",
+        badge: "Fresh",
+        href: "/speisekarte",
+      },
+      {
+        title: "Breakfast & Brunch",
+        description: "Artisan sourdough bread, croissants, homemade dips, and bowls.",
+        href: "/speisekarte",
+      },
+      {
+        title: "Refreshments & Signature Drinks",
+        description: "Pink Dragon Lemonade, craft iced teas, and organic infusions.",
+        badge: "Special",
+        href: "/speisekarte",
+      },
+    ],
+    DropdownHighlight: {
+      tag: "Signature Special",
+      title: "Ruby Rose Latte & Raspberry-Pistachio Tart",
+      description: "Delicate beet-oat latte paired harmoniously with silky artisanal pastry.",
+      href: "/speisekarte",
+    },
   },
 
   HomePage: {
@@ -24,6 +55,30 @@ export const EN: ITranslation = {
       "Take a moment for yourself. In our cozy café directly along the promenade, we bake fresh delicacies daily and craft specialty coffees.",
     PrimaryCta: "Explore Menu",
     SecondaryCta: "Book a Table",
+    ConceptTag: "The Concept",
+    ConceptTitle: "Why guests fall in love with Süße Auszeit",
+    Highlights: [
+      {
+        title: "Specialty Coffee",
+        desc: "Single-origin beans, gently roasted and prepared with passion by skilled baristas.",
+      },
+      {
+        title: "Fresh Bakery Craft",
+        desc: "Homemade tarts, cakes, and pastries crafted fresh every morning with pure love.",
+      },
+      {
+        title: "Lounge & Waterfront Patio",
+        desc: "Comfortable seating and scenic waterside views for dates, relaxed gatherings, or work.",
+      },
+      {
+        title: "Heartfelt Hospitality",
+        desc: "A sanctuary of comfort with ambient lounge tunes and authentic, attentive service.",
+      },
+    ],
+    PreviewBadge: "Delicacies & Specialty Coffees",
+    PreviewTitle: "From our Patisserie & Coffee Bar",
+    PreviewSubtitle: "Freshly prepared daily using carefully chosen organic ingredients",
+    PreviewCta: "Explore Full Menu",
   },
 
   MenuPage: {
@@ -37,7 +92,14 @@ export const EN: ITranslation = {
     },
     Headline: "Our Menu",
     Subheadline: "Artisanal masterpieces, specialty coffees, and refreshing signature creations for your sweet break.",
-    AllCategories: "All Categories",
+    AllCategories: "All Specialties",
+    Categories: {
+      alle: "All Specialties",
+      kaffee: "Coffee & Barista",
+      torten: "Cakes & Patisserie",
+      fruehstueck: "Breakfast & Brunch",
+      drinks: "Drinks & Refreshments",
+    },
   },
 
   ContactPage: {
@@ -127,6 +189,12 @@ export const EN: ITranslation = {
         imageAlt: "Cozy café interior and waterfront terrace lounge",
       },
     ],
+    Cta: {
+      badge: "Warm Welcome",
+      title: "Ready for your sweet timeout?",
+      description:
+        "Join us by the water, take a seat, and let our team pamper you with aromatic coffee and handcrafted patisserie.",
+    },
   },
 
   LegalPage: {

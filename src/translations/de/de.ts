@@ -7,6 +7,37 @@ export const DE: ITranslation = {
     AboutLabel: "Über uns",
     ContactLabel: "Öffnungszeiten & Anfahrt",
     ReserveLabel: "Tisch reservieren",
+    DropdownItems: [
+      {
+        title: "Kaffee & Barista-Kreationen",
+        description: "Espresso, Flat White, Cold Brew und saisonale Kaffee-Spezialitäten.",
+        badge: "Bio Bohnen",
+        href: "/speisekarte",
+      },
+      {
+        title: "Torten & Patisserie",
+        description: "Täglich frisch gebackene Kuchen, Törtchen und feine Macarons.",
+        badge: "Frisch",
+        href: "/speisekarte",
+      },
+      {
+        title: "Frühstück & Brunch",
+        description: "Artisan-Brot, Croissants, hausgemachte Aufstriche und Bowls.",
+        href: "/speisekarte",
+      },
+      {
+        title: "Erfrischungen & Signature Drinks",
+        description: "Pink Dragon Limo, hausgemachte Eistees und Bio-Kräutertees.",
+        badge: "Special",
+        href: "/speisekarte",
+      },
+    ],
+    DropdownHighlight: {
+      tag: "Signature Empfehlung",
+      title: "Ruby Rose Latte & Himbeer-Pistazien Törtchen",
+      description: "Zartrosa Rote-Bete-Hafer-Latte harmonisch abgestimmt mit samtiger Patisserie.",
+      href: "/speisekarte",
+    },
   },
 
   HomePage: {
@@ -24,6 +55,30 @@ export const DE: ITranslation = {
       "Lassen Sie die Seele baumeln. In unserem gemütlichen Café direkt an der Seepromenade kreieren wir täglich frische Backkunstwerke und servieren aromatische Kaffeespezialitäten.",
     PrimaryCta: "Speisekarte entdecken",
     SecondaryCta: "Tisch anfragen",
+    ConceptTag: "Das Konzept",
+    ConceptTitle: "Warum die „Süße Auszeit“ begeistert",
+    Highlights: [
+      {
+        title: "Specialty Coffee",
+        desc: "Single-Origin Bohnen, aromaschonend geröstet und von passionierten Baristas zubereitet.",
+      },
+      {
+        title: "Frische Backkunst",
+        desc: "Hausgemachte Törtchen, Kuchen und Desserts täglich frisch mit Liebe zubereitet.",
+      },
+      {
+        title: "Lounge & Seeterrasse",
+        desc: "Gemütliche Sitzbereiche und Aussicht für entspannte Treffen, Dates oder Pausen.",
+      },
+      {
+        title: "Herzliche Gastfreundschaft",
+        desc: "Eine Wohlfühloase mit stimmungsvoller Musik und herzlichem Service.",
+      },
+    ],
+    PreviewBadge: "Köstlichkeiten & Kaffeespezialitäten",
+    PreviewTitle: "Aus unserer Patisserie & Kaffeebar",
+    PreviewSubtitle: "Täglich frisch zubereitet mit erlesenen Bio-Zutaten",
+    PreviewCta: "Gesamte Speisekarte entdecken",
   },
 
   MenuPage: {
@@ -37,7 +92,14 @@ export const DE: ITranslation = {
     },
     Headline: "Unsere Speisekarte",
     Subheadline: "Handgefertigte Meisterwerke, Spezialitätenkaffee und erfrischende Kreationen für Ihre Auszeit.",
-    AllCategories: "Alle Kategorien",
+    AllCategories: "Alle Spezialitäten",
+    Categories: {
+      alle: "Alle Spezialitäten",
+      kaffee: "Kaffee & Barista",
+      torten: "Torten & Patisserie",
+      fruehstueck: "Frühstück & Brunch",
+      drinks: "Erfrischungen & Drinks",
+    },
   },
 
   ContactPage: {
@@ -128,6 +190,12 @@ export const DE: ITranslation = {
         imageAlt: "Stimmungsvolles Café-Ambiente und Terrasse am Wasser",
       },
     ],
+    Cta: {
+      badge: "Herzlich Willkommen",
+      title: "Bereit für Ihre persönliche süße Auszeit?",
+      description:
+        "Kommen Sie vorbei, nehmen Sie Platz und lassen Sie sich von unserem Team mit duftendem Kaffee und handgefertigter Patisserie verwöhnen.",
+    },
   },
 
   LegalPage: {
