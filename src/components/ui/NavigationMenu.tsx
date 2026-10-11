@@ -64,12 +64,12 @@ export function NavigationMenuTrigger({
   return (
     <NavigationMenuPrimitive.Trigger
       data-slot="navigation-menu-trigger"
-      className={cn(navigationMenuTriggerStyle(), "group cursor-pointer", className)}
+      className={cn(navigationMenuTriggerStyle(), "group/trigger cursor-pointer", className)}
       {...props}
     >
       {children}{" "}
       <ChevronDownIcon
-        className="relative top-[1px] ms-1.5 size-3.5 transition duration-300 group-data-[popup-open]:rotate-180 text-stone-400 group-hover:text-pink-400"
+        className="relative top-[1px] ms-1.5 size-3.5 transition duration-300 group-data-[popup-open]/trigger:rotate-180 text-stone-400 group-hover/trigger:text-pink-400 group-data-[popup-open]/trigger:text-pink-400"
         aria-hidden="true"
       />
     </NavigationMenuPrimitive.Trigger>
