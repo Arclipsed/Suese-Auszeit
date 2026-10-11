@@ -53,7 +53,7 @@ export function NavigationMenuItem({
 }
 
 export const navigationMenuTriggerStyle = cva(
-  "group inline-flex h-10 w-max items-center justify-center rounded-full bg-transparent px-4 py-2 text-sm font-medium text-stone-300 hover:bg-white/5 hover:text-pink-300 focus:bg-white/10 focus:text-pink-300 disabled:pointer-events-none disabled:opacity-50 data-[popup-open]:bg-white/10 data-[popup-open]:text-pink-300 outline-none transition-[color,background-color,box-shadow]"
+  "group inline-flex h-10 w-max items-center justify-center rounded-full bg-transparent px-4 py-2 text-sm font-medium text-stone-300 hover:bg-white/5 hover:text-pink-300 focus-visible:bg-white/10 focus-visible:text-pink-300 disabled:pointer-events-none disabled:opacity-50 data-[popup-open]:bg-white/10 data-[popup-open]:text-pink-300 outline-none transition-[color,background-color,box-shadow]"
 );
 
 export function NavigationMenuTrigger({
@@ -117,7 +117,7 @@ export function NavigationMenuPositioner({
         collisionPadding={{ top: 5, bottom: 5, left: 20, right: 20 }}
         collisionAvoidance={{ side: "none" }}
         className={cn(
-          "box-border h-[var(--positioner-height)] w-[var(--positioner-width)] max-w-[var(--available-width)] transition-[top,left,right,bottom] duration-[var(--duration)] ease-[var(--easing)] before:absolute before:content-[''] data-[instant]:transition-none data-[side=bottom]:before:top-[-10px] data-[side=bottom]:before:right-0 data-[side=bottom]:before:left-0 data-[side=bottom]:before:h-2.5 data-[side=left]:before:top-0 data-[side=left]:before:right-[-10px] data-[side=left]:before:bottom-0 data-[side=left]:before:w-2.5 data-[side=right]:before:top-0 data-[side=right]:before:bottom-0 data-[side=right]:before:left-[-10px] data-[side=right]:before:w-2.5 data-[side=top]:before:right-0 data-[side=top]:before:bottom-[-10px] data-[side=top]:before:left-0 data-[side=top]:before:h-2.5",
+          "z-50 box-border h-[var(--positioner-height)] w-[var(--positioner-width)] max-w-[var(--available-width)] transition-[top,left,right,bottom] duration-[var(--duration)] ease-[var(--easing)] before:absolute before:content-[''] data-[instant]:transition-none data-[side=bottom]:before:top-[-10px] data-[side=bottom]:before:right-0 data-[side=bottom]:before:left-0 data-[side=bottom]:before:h-2.5 data-[side=left]:before:top-0 data-[side=left]:before:right-[-10px] data-[side=left]:before:bottom-0 data-[side=left]:before:w-2.5 data-[side=right]:before:top-0 data-[side=right]:before:bottom-0 data-[side=right]:before:left-[-10px] data-[side=right]:before:w-2.5 data-[side=top]:before:right-0 data-[side=top]:before:bottom-[-10px] data-[side=top]:before:left-0 data-[side=top]:before:h-2.5",
           className
         )}
         style={
@@ -173,7 +173,7 @@ export function NavigationMenuLink({
     <NavigationMenuPrimitive.Link
       data-slot="navigation-menu-link"
       className={cn(
-        "data-[active]:focus:bg-white/10 data-[active]:hover:bg-white/10 data-[active]:bg-white/5 hover:bg-white/5 focus:bg-white/10 flex flex-col gap-1 rounded-xl p-3 text-sm transition-all outline-none cursor-pointer",
+        "data-[active]:focus-visible:bg-white/10 data-[active]:hover:bg-white/10 data-[active]:bg-white/5 hover:bg-white/5 focus-visible:bg-white/10 flex flex-col gap-1 rounded-xl p-3 text-sm transition-all outline-none cursor-pointer",
         className
       )}
       {...props}
