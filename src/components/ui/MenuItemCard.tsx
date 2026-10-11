@@ -35,37 +35,29 @@ export const MenuItemCard = React.forwardRef<HTMLDivElement, MenuItemCardProps>(
     },
     ref
   ) => {
-    const cardVariants = {
-      initial: { opacity: 0, y: 15 },
-      animate: { opacity: 1, y: 0, transition: { duration: 0.3 } },
-      hover: { scale: 1.02, transition: { duration: 0.2 } },
-    };
-
     return (
       <motion.div
         ref={ref}
+        whileHover={{ y: -4 }}
+        transition={{ duration: 0.2 }}
         className={cn(
           "relative flex flex-col w-full overflow-hidden rounded-2xl border border-white/10 bg-[#141217] text-stone-100 shadow-xl group hover:border-pink-500/40 hover:shadow-[0_0_25px_rgba(255,77,148,0.18)] transition-all",
           className
         )}
-        variants={cardVariants}
-        initial="initial"
-        animate="animate"
-        whileHover="hover"
-        layout
         {...props}
       >
-        {/* Image Container */}
-        <div className="relative overflow-hidden aspect-[4/3] w-full">
+        {/* Image Container with seamless bottom background matching card */}
+        <div className="relative overflow-hidden aspect-[4/3] w-full bg-[#141217]">
           <img
             src={imageUrl}
             alt={name}
-            className="object-cover w-full h-full transition-transform duration-500 ease-out group-hover:scale-108"
+            className="block w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#141217] via-transparent to-black/20" />
+          {/* Smooth black gradient overlay fade */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#141217] via-[#141217]/30 to-transparent pointer-events-none" />
 
           {/* Badges top bar */}
-          <div className="absolute top-3 inset-x-3 flex items-center justify-between">
+          <div className="absolute top-3 inset-x-3 flex items-center justify-between pointer-events-none">
             {badge ? (
               <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-pink-500/85 backdrop-blur-md text-white shadow-[0_0_10px_rgba(255,77,148,0.4)]">
                 {badge}
@@ -83,8 +75,8 @@ export const MenuItemCard = React.forwardRef<HTMLDivElement, MenuItemCardProps>(
           </div>
         </div>
 
-        {/* Content Section */}
-        <div className="flex flex-col flex-grow p-5 text-left">
+        {/* Content Section - pulled up by 12px over the bottom gradient to eliminate any possible line gap */}
+        <div className="relative z-10 -mt-3 flex flex-col flex-grow p-5 pt-3 bg-[#141217] text-left">
           {/* Pricing & Quantity */}
           <div className="flex items-center justify-between gap-2">
             <div className="flex items-baseline gap-2">
