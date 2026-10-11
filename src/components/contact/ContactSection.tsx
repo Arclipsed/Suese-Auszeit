@@ -100,8 +100,8 @@ export default function ContactSection({
         {/* Exterior Cafe Panorama Highlight under the cards */}
         <div className="mt-12 rounded-3xl overflow-hidden border border-white/10 relative h-[300px] sm:h-[380px] group shadow-2xl">
           <Image
-            src="/cafe-exterior.jpg"
-            alt="Café Süße Auszeit Terrasse am Wasser"
+            src="/Images/Outside_Night.png"
+            alt="Café Süße Auszeit Terrasse am Wasser bei Nacht"
             fill
             sizes="(max-width: 1280px) 100vw, 1200px"
             className="object-cover group-hover:scale-102 transition-transform duration-700"
