@@ -53,6 +53,83 @@ export const DE: ITranslation = {
     Subheadline: "Besuchen Sie uns direkt am Wasser – hier finden Sie alle Details für Ihren Besuch.",
   },
 
+  AboutPage: {
+    MetaTags: {
+      title: "Über uns — Café Süße Auszeit | Handwerk, Herz & Leidenschaft",
+      description:
+        "Lernen Sie die Menschen und die Geschichte hinter Café Süße Auszeit kennen. Von handwerklicher Patisserie bis zur idyllischen Seeterrasse.",
+      imgUrl: "https://suesse-auszeit.example.com/og/home.png",
+      tags: ["Über uns", "Team", "Geschichte", "Patisserie", "Barista", "Süße Auszeit"],
+      url: "https://suesse-auszeit.example.com/ueber-uns",
+    },
+    Badge: "Unsere Geschichte & Passion",
+    Headline: "Hinter jedem Genussmoment steht ein Herzschlag",
+    Subheadline:
+      "Café Süße Auszeit entstand aus dem Wunsch, einen Ort der puren Entspannung zu schaffen – mit erstklassigen Zutaten, echter Handwerkskunst und warmer Gastfreundschaft.",
+    Sections: [
+      {
+        tag: "Die Gründer & Vision",
+        title: "Eine Leidenschaft für das Besondere",
+        subtitle: "Wie aus einem Traum unser Lieblingsplatz am Wasser wurde",
+        description:
+          "Begonnen hat alles mit der Sehnsucht nach einem Rückzugsort vom hektischen Alltag: Ein Platz, an dem die Zeit für eine Weile stillsteht, duftender Espresso durch die Luft zieht und jede Torte mit Hingabe von Hand garniert wird. Gemeinsam mit unserem Team haben wir das Café Süße Auszeit ins Leben gerufen – eine Oase der Wärme, Gemütlichkeit und süßen Verwöhnung.",
+        bullets: [
+          "Gegründet aus Liebe zur traditionellen Back- und Kaffeekultur",
+          "Fokus auf regionale Bio-Zutaten und faire Partnerschaften",
+          "Ein herzliches Team, das jeden Gast wie einen guten Freund empfängt",
+        ],
+        imageSrc:
+          "https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1200&q=80",
+        imageAlt: "Unser Gründer-Team mit Leidenschaft in der Backstube",
+      },
+      {
+        tag: "Barista-Handwerk",
+        title: "Kaffeekunst in Perfektion",
+        subtitle: "Ausgewählte Bohnen, aromaschonende Röstung & Latte Art",
+        description:
+          "Unser Barista-Team versteht Kaffee nicht nur als Wachmacher, sondern als echtes Sinneserlebnis. Wir beziehen unsere Bohnen aus transparenten, nachhaltigen Direktkooperationen. Ob feinsinniger Espresso, samtiger Flat White oder unsere Signature Kreationen wie der Ruby Rose Latte – jede Tasse wird mit Präzision und Herzblut zubereitet.",
+        bullets: [
+          "100% sortenreine Arabica-Spezialitätenbohnen aus nachhaltigem Anbau",
+          "Perfekt temperierter Milchschaum & vegane Bio-Alternativen ohne Aufpreis",
+          "Individuelle Zubereitung nach Barista-Standard",
+        ],
+        imageSrc:
+          "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&q=80",
+        imageAlt: "Barista bereitet sorgfältig Kaffeespezialitäten zu",
+      },
+      {
+        tag: "Hauseigene Backstube",
+        title: "Süße Meisterwerke jeden Morgen frisch",
+        subtitle: "Traditionelle Patisserie trifft auf moderne Kreationen",
+        description:
+          "Jeden Tag beginnt in unserer gläsernen Backstube das Kneten, Rollen und Verzieren, bevor die ersten Sonnenstrahlen das Wasser küssen. Wir verzichten konsequent auf künstliche Aromen oder vorgefertigte Backmischungen. Stattdessen vertrauen wir auf echte Bourbon-Vanille, feinste belgische Schokolade, frische Beeren und überlieferte Familienrezepte.",
+        bullets: [
+          "Täglich ofenfrische Tartes, Törtchen, Croissants und Kuchen",
+          "Große Auswahl an veganen und glutenfreien Genussoptionen",
+          "Liebevolle Dekoration mit essbaren Blüten und feinsten Früchten",
+        ],
+        imageSrc:
+          "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1200&q=80",
+        imageAlt: "Frisch zubereitete Torten und Gebäcke in der Patisserie",
+      },
+      {
+        tag: "Das Ambiente",
+        title: "Ihre Oase mit Seeblick & Lounge-Flair",
+        subtitle: "Drinnen stilvoll entspannen, draußen das Glitzern des Wassers genießen",
+        description:
+          "Süße Auszeit ist mehr als ein Café – es ist Ihr zweites Wohnzimmer. Unser Interieur kombiniert gemütliche Samtsessel mit stimmungsvollem Lounge-Licht und warmen Holzelementen. Auf unserer großen Seeterrasse können Sie die frische Brise genießen, den Schwänen zuschauen und die Seele baumeln lassen.",
+        bullets: [
+          "Weitläufige Sonnenterrasse direkt an der Uferpromenade",
+          "Gemütliche Lounge-Sitzecken mit warmem Lichtkonzept",
+          "Der perfekte Ort für Verabredungen, Auszeiten oder entspanntes Arbeiten",
+        ],
+        imageSrc:
+          "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=80",
+        imageAlt: "Stimmungsvolles Café-Ambiente und Terrasse am Wasser",
+      },
+    ],
+  },
+
   LegalPage: {
     MetaTags: {
       title: "Impressum — Süße Auszeit",

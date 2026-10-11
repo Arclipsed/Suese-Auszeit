@@ -110,7 +110,7 @@ export default function MobileNavigation({
 
             {/* Weitere Nav-Links */}
             <Link
-              href="/#ueber-uns"
+              href="/ueber-uns"
               onClick={closeMenu}
               className="flex items-center justify-between rounded-xl p-3 text-base font-semibold text-stone-200 hover:bg-white/5 hover:text-pink-400"
             >
@@ -118,7 +118,7 @@ export default function MobileNavigation({
             </Link>
 
             <Link
-              href="/#kontakt"
+              href="/kontakt"
               onClick={closeMenu}
               className="flex items-center justify-between rounded-xl p-3 text-base font-semibold text-stone-200 hover:bg-white/5 hover:text-pink-400"
             >

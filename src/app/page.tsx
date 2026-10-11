@@ -85,8 +85,8 @@ export default async function Home() {
           items={MENU_DROPDOWN_ITEMS}
           highlight={MENU_HIGHLIGHT}
         />
-        <NavigationItem href="#ueber-uns" label={t.Navigation.AboutLabel} />
-        <NavigationItem href="#kontakt" label={t.Navigation.ContactLabel} />
+        <NavigationItem href="/ueber-uns" label={t.Navigation.AboutLabel} />
+        <NavigationItem href="/kontakt" label={t.Navigation.ContactLabel} />
       </Navigation>
 
       <main className="flex-1">

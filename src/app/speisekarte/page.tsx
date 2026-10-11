@@ -83,7 +83,7 @@ export default async function SpeisekartePage() {
           items={MENU_DROPDOWN_ITEMS}
           highlight={MENU_HIGHLIGHT}
         />
-        <NavigationItem href="/#ueber-uns" label={t.Navigation.AboutLabel} />
+        <NavigationItem href="/ueber-uns" label={t.Navigation.AboutLabel} />
         <NavigationItem href="/#kontakt" label={t.Navigation.ContactLabel} />
       </Navigation>
 

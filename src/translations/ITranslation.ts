@@ -31,6 +31,22 @@ export interface ITranslation {
     Subheadline: string;
   };
 
+  AboutPage: {
+    MetaTags: IMetaTags;
+    Badge: string;
+    Headline: string;
+    Subheadline: string;
+    Sections: Array<{
+      tag: string;
+      title: string;
+      subtitle: string;
+      description: string;
+      bullets: string[];
+      imageSrc: string;
+      imageAlt: string;
+    }>;
+  };
+
   LegalPage: {
     MetaTags: IMetaTags;
     Headline: string;

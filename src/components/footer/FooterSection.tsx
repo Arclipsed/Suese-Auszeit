@@ -52,8 +52,8 @@ export default function FooterSection({
   const primaryLinks = [
     { title: homeLabel, href: "/" },
     { title: menuLabel, href: "/speisekarte" },
-    { title: aboutLabel, href: "/#ueber-uns" },
-    { title: contactLabel, href: "/#kontakt" },
+    { title: aboutLabel, href: "/ueber-uns" },
+    { title: contactLabel, href: "/kontakt" },
   ];
 
   const secondaryLinks = [
