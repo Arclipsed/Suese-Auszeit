@@ -18,4 +18,19 @@ export interface ITranslation {
     PrimaryCta: string;
     SecondaryCta: string;
   };
+
+  Footer: {
+    Tagline: string;
+    OpeningHoursTitle: string;
+    OpeningHoursWeekdays: string;
+    OpeningHoursWeekend: string;
+    ContactTitle: string;
+    Address: string;
+    Phone: string;
+    Email: string;
+    QuickLinksTitle: string;
+    PrivacyLabel: string;
+    ImprintLabel: string;
+    Copyright: string;
+  };
 }

@@ -7,8 +7,10 @@ import NavigationItem from "@/components/navigation/NavigationItem";
 import NavigationDropdownItem from "@/components/navigation/NavigationDropdownItem";
 import NavigationVerticalLine from "@/components/navigation/NavigationVerticalLine";
 import NavigationReserveButton from "@/components/navigation/NavigationReserveButton";
+import MobileNavigation from "@/components/navigation/MobileNavigation";
 import HeroSection from "@/components/hero/HeroSection";
 import HighlightsSection from "@/components/highlights/HighlightsSection";
+import FooterSection from "@/components/footer/FooterSection";
 
 export const instant = false;
 
@@ -59,8 +61,20 @@ export default async function Home() {
         logo={<NavigationLogo cafeName="Süße Auszeit" tagline="Café & Lounge" />}
         actions={
           <>
-            <NavigationVerticalLine className="hidden sm:block h-5 w-px bg-stone-800" />
-            <NavigationReserveButton label={t.Navigation.ReserveLabel} href="#reservierung" />
+            <div className="hidden sm:flex items-center gap-3">
+              <NavigationVerticalLine className="h-5 w-px bg-stone-800" />
+              <NavigationReserveButton label={t.Navigation.ReserveLabel} href="#reservierung" />
+            </div>
+
+            <MobileNavigation
+              homeLabel={t.Navigation.HomeLabel}
+              menuLabel={t.Navigation.MenuLabel}
+              aboutLabel={t.Navigation.AboutLabel}
+              galleryLabel={t.Navigation.GalleryLabel}
+              contactLabel={t.Navigation.ContactLabel}
+              reserveLabel={t.Navigation.ReserveLabel}
+              menuItems={MENU_DROPDOWN_ITEMS}
+            />
           </>
         }
       >
@@ -85,6 +99,20 @@ export default async function Home() {
         />
         <HighlightsSection />
       </main>
+
+      <FooterSection
+        tagline={t.Footer.Tagline}
+        homeLabel={t.Navigation.HomeLabel}
+        menuLabel={t.Navigation.MenuLabel}
+        aboutLabel={t.Navigation.AboutLabel}
+        galleryLabel={t.Navigation.GalleryLabel}
+        contactLabel={t.Navigation.ContactLabel}
+        privacyLabel={t.Footer.PrivacyLabel}
+        imprintLabel={t.Footer.ImprintLabel}
+        address={t.Footer.Address}
+        phone={t.Footer.Phone}
+        email={t.Footer.Email}
+      />
     </div>
   );
 }
