@@ -10,6 +10,7 @@ interface MenuPreviewSectionProps {
   title: string;
   subtitle: string;
   ctaText: string;
+  prepText?: string;
 }
 
 export default function MenuPreviewSection({
@@ -17,6 +18,7 @@ export default function MenuPreviewSection({
   title,
   subtitle,
   ctaText,
+  prepText,
 }: MenuPreviewSectionProps) {
   return (
     <section id="karte" className="py-20 relative">
@@ -46,6 +48,7 @@ export default function MenuPreviewSection({
               prepTimeInMinutes={item.prepTimeInMinutes}
               badge={item.badge}
               isVegetarian={item.isVegetarian}
+              prepText={prepText}
             />
           ))}
         </div>

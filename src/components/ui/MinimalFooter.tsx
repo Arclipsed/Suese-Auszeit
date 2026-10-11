@@ -21,6 +21,7 @@ export interface MinimalFooterProps {
   secondaryLinks?: FooterLink[];
   socialLinks?: SocialLink[];
   copyrightText?: string;
+  craftedWithLove?: string;
   className?: string;
 }
 
@@ -33,6 +34,7 @@ export function MinimalFooter({
   secondaryLinks = [],
   socialLinks = [],
   copyrightText,
+  craftedWithLove,
   className,
 }: MinimalFooterProps) {
   // Default year without calling dynamic new Date() during static prerender
@@ -110,7 +112,7 @@ export function MinimalFooter({
         <div className="mt-12 pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500">
           <p>© {currentYear} {copyrightText || "Süße Auszeit. Alle Rechte vorbehalten."}</p>
           <p className="text-stone-600">
-            Handcrafted with love & coffee by the water.
+            {craftedWithLove || "Handcrafted with love & coffee by the water."}
           </p>
         </div>
       </div>

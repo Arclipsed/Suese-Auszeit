@@ -3,19 +3,61 @@ import AddressCard from "@/components/contact/AddressCard";
 import Image from "next/image";
 
 interface ContactSectionProps {
-  headline?: string;
-  subheadline?: string;
+  headline: string;
+  subheadline: string;
+  openingHoursCardTitle: string;
+  openNowBadge: string;
+  closedNowBadge: string;
+  days: {
+    monday: string;
+    tuesday: string;
+    wednesday: string;
+    thursday: string;
+    friday: string;
+    saturday: string;
+    sunday: string;
+  };
+  closedLabel: string;
+  timeSuffix?: string;
+  locationCardTitle: string;
+  addressLabel: string;
+  waterfrontHint: string;
+  phoneLabel: string;
+  emailLabel: string;
+  copyAddressButton: string;
+  copiedAddressButton: string;
+  openMapsButton: string;
+  scenicLocationTag: string;
+  scenicLocationTitle: string;
+  scenicLocationDesc: string;
   address?: string;
   phone?: string;
   email?: string;
 }
 
 export default function ContactSection({
-  headline = "Öffnungszeiten & Anfahrt",
-  subheadline = "Besuchen Sie uns direkt am Wasser – hier finden Sie alle Details für Ihren Besuch.",
-  address,
-  phone,
-  email,
+  headline,
+  subheadline,
+  openingHoursCardTitle,
+  openNowBadge,
+  closedNowBadge,
+  days,
+  closedLabel,
+  timeSuffix,
+  locationCardTitle,
+  addressLabel,
+  waterfrontHint,
+  phoneLabel,
+  emailLabel,
+  copyAddressButton,
+  copiedAddressButton,
+  openMapsButton,
+  scenicLocationTag,
+  scenicLocationTitle,
+  scenicLocationDesc,
+  address = "Hafenpromenade 12, Am Wasser",
+  phone = "+49 (0) 123 456 789",
+  email = "hallo@suesse-auszeit.de",
 }: ContactSectionProps) {
   return (
     <section id="kontakt" className="py-20 relative">
@@ -32,8 +74,27 @@ export default function ContactSection({
 
         {/* 2-Column Cards Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
-          <LiveOpeningHoursCard />
-          <AddressCard address={address} phone={phone} email={email} />
+          <LiveOpeningHoursCard
+            cardTitle={openingHoursCardTitle}
+            openNowBadge={openNowBadge}
+            closedNowBadge={closedNowBadge}
+            days={days}
+            closedLabel={closedLabel}
+            timeSuffix={timeSuffix}
+          />
+          <AddressCard
+            cardTitle={locationCardTitle}
+            address={address}
+            waterfrontHint={waterfrontHint}
+            addressLabel={addressLabel}
+            phoneLabel={phoneLabel}
+            emailLabel={emailLabel}
+            copyButtonText={copyAddressButton}
+            copiedButtonText={copiedAddressButton}
+            openMapsButtonText={openMapsButton}
+            phone={phone}
+            email={email}
+          />
         </div>
 
         {/* Exterior Cafe Panorama Highlight under the cards */}
@@ -47,13 +108,13 @@ export default function ContactSection({
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-6 sm:p-10">
             <span className="text-xs uppercase font-bold tracking-widest text-pink-400">
-              Traumhafte Lage
+              {scenicLocationTag}
             </span>
             <h3 className="font-serif text-xl sm:text-2xl font-bold text-white mt-1">
-              Direkt an der Uferpromenade mit Außenbereich
+              {scenicLocationTitle}
             </h3>
             <p className="text-xs sm:text-sm text-stone-300 mt-1 max-w-xl">
-              Parkplätze finden Sie bequem entlang der Promenade. Auch mit dem Fahrrad oder Boot optimal erreichbar.
+              {scenicLocationDesc}
             </p>
           </div>
         </div>

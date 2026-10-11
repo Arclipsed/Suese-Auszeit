@@ -5,13 +5,29 @@ import { useState } from "react";
 import { MapPin, Navigation2, Copy, Check, ExternalLink } from "lucide-react";
 
 interface AddressCardProps {
-  address?: string;
+  cardTitle: string;
+  address: string;
+  waterfrontHint: string;
+  addressLabel: string;
+  phoneLabel: string;
+  emailLabel: string;
+  copyButtonText: string;
+  copiedButtonText: string;
+  openMapsButtonText: string;
   phone?: string;
   email?: string;
 }
 
 export default function AddressCard({
-  address = "Hafenpromenade 12, 12345 Musterstadt",
+  cardTitle,
+  address,
+  waterfrontHint,
+  addressLabel,
+  phoneLabel,
+  emailLabel,
+  copyButtonText,
+  copiedButtonText,
+  openMapsButtonText,
   phone = "+49 (0) 123 456 789",
   email = "hallo@suesse-auszeit.de",
 }: AddressCardProps) {
@@ -36,21 +52,21 @@ export default function AddressCard({
       <div>
         <div className="flex items-center gap-2 pb-6 border-b border-white/5">
           <MapPin className="size-5 text-pink-400" />
-          <h3 className="font-serif text-xl font-bold text-white">Standort & Kontakt</h3>
+          <h3 className="font-serif text-xl font-bold text-white">{cardTitle}</h3>
         </div>
 
         <div className="pt-6 space-y-4 text-sm text-stone-300">
           <div>
             <span className="text-xs uppercase font-bold tracking-wider text-pink-400 block mb-1">
-              Adresse
+              {addressLabel}
             </span>
             <p className="text-base font-semibold text-white leading-snug">{address}</p>
-            <p className="text-xs text-stone-400 mt-1">Direkt an der Uferpromenade mit Wasserblick</p>
+            <p className="text-xs text-stone-400 mt-1">{waterfrontHint}</p>
           </div>
 
           <div className="pt-2 border-t border-white/5">
             <span className="text-xs uppercase font-bold tracking-wider text-stone-400 block mb-1">
-              Telefon
+              {phoneLabel}
             </span>
             <a href={`tel:${phone.replace(/\s+/g, "")}`} className="text-stone-200 hover:text-pink-300 transition-colors">
               {phone}
@@ -59,7 +75,7 @@ export default function AddressCard({
 
           <div>
             <span className="text-xs uppercase font-bold tracking-wider text-stone-400 block mb-1">
-              E-Mail
+              {emailLabel}
             </span>
             <a href={`mailto:${email}`} className="text-stone-200 hover:text-pink-300 transition-colors">
               {email}
@@ -76,7 +92,7 @@ export default function AddressCard({
           className="flex-1 inline-flex items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-xs font-semibold text-stone-200 hover:bg-white/10 hover:border-pink-500/30 transition-all cursor-pointer"
         >
           {copied ? <Check className="size-4 text-emerald-400" /> : <Copy className="size-4" />}
-          <span>{copied ? "Adresse kopiert!" : "Adresse kopieren"}</span>
+          <span>{copied ? copiedButtonText : copyButtonText}</span>
         </button>
 
         <a
@@ -86,7 +102,7 @@ export default function AddressCard({
           className="flex-1 inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-pink-600 to-pink-500 px-4 py-3 text-xs font-semibold text-white shadow-[0_0_15px_rgba(255,77,148,0.35)] hover:shadow-[0_0_20px_rgba(255,77,148,0.5)] transition-all"
         >
           <Navigation2 className="size-4" />
-          <span>In Google Maps öffnen</span>
+          <span>{openMapsButtonText}</span>
           <ExternalLink className="size-3 opacity-70" />
         </a>
       </div>

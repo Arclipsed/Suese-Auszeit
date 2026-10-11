@@ -23,11 +23,20 @@ export interface ITranslation {
 
   HomePage: {
     MetaTags: IMetaTags;
+    ExperienceBadge: string;
     Headline: string;
     Subheadline: string;
     Description: string;
     PrimaryCta: string;
     SecondaryCta: string;
+    TrustIndicators: Array<{
+      title: string;
+      subtitle: string;
+      highlight?: boolean;
+    }>;
+    ShowcaseTag: string;
+    ShowcaseTitle: string;
+    ShowcaseDescription: string;
     ConceptTag: string;
     ConceptTitle: string;
     Highlights: Array<{
@@ -46,12 +55,38 @@ export interface ITranslation {
     Subheadline: string;
     AllCategories: string;
     Categories: Record<string, string>;
+    FreshlyServedText: string;
   };
 
   ContactPage: {
     MetaTags: IMetaTags;
     Headline: string;
     Subheadline: string;
+    OpeningHoursCardTitle: string;
+    OpenNowBadge: string;
+    ClosedNowBadge: string;
+    Days: {
+      monday: string;
+      tuesday: string;
+      wednesday: string;
+      thursday: string;
+      friday: string;
+      saturday: string;
+      sunday: string;
+    };
+    ClosedLabel: string;
+    TimeSuffix: string;
+    LocationCardTitle: string;
+    AddressLabel: string;
+    WaterfrontHint: string;
+    PhoneLabel: string;
+    EmailLabel: string;
+    CopyAddressButton: string;
+    CopiedAddressButton: string;
+    OpenMapsButton: string;
+    ScenicLocationTag: string;
+    ScenicLocationTitle: string;
+    ScenicLocationDesc: string;
   };
 
   AboutPage: {
@@ -93,6 +128,7 @@ export interface ITranslation {
     OpeningHoursWeekdays: string;
     OpeningHoursWeekend: string;
     ContactTitle: string;
+    ContactAndLegalTitle: string;
     Address: string;
     Phone: string;
     Email: string;
@@ -100,5 +136,6 @@ export interface ITranslation {
     PrivacyLabel: string;
     ImprintLabel: string;
     Copyright: string;
+    CraftedWithLove: string;
   };
 }

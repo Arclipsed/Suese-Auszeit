@@ -71,6 +71,10 @@ export default async function ImpressumPage() {
         address={t.Footer.Address}
         phone={t.Footer.Phone}
         email={t.Footer.Email}
+        quickLinksTitle={t.Footer.QuickLinksTitle}
+        contactAndLegalTitle={t.Footer.ContactAndLegalTitle}
+        copyright={t.Footer.Copyright}
+        craftedWithLove={t.Footer.CraftedWithLove}
       />
     </div>
   );

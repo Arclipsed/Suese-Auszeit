@@ -57,6 +57,23 @@ export default async function KontaktPage() {
         <ContactSection
           headline={t.ContactPage.Headline}
           subheadline={t.ContactPage.Subheadline}
+          openingHoursCardTitle={t.ContactPage.OpeningHoursCardTitle}
+          openNowBadge={t.ContactPage.OpenNowBadge}
+          closedNowBadge={t.ContactPage.ClosedNowBadge}
+          days={t.ContactPage.Days}
+          closedLabel={t.ContactPage.ClosedLabel}
+          timeSuffix={t.ContactPage.TimeSuffix}
+          locationCardTitle={t.ContactPage.LocationCardTitle}
+          addressLabel={t.ContactPage.AddressLabel}
+          waterfrontHint={t.ContactPage.WaterfrontHint}
+          phoneLabel={t.ContactPage.PhoneLabel}
+          emailLabel={t.ContactPage.EmailLabel}
+          copyAddressButton={t.ContactPage.CopyAddressButton}
+          copiedAddressButton={t.ContactPage.CopiedAddressButton}
+          openMapsButton={t.ContactPage.OpenMapsButton}
+          scenicLocationTag={t.ContactPage.ScenicLocationTag}
+          scenicLocationTitle={t.ContactPage.ScenicLocationTitle}
+          scenicLocationDesc={t.ContactPage.ScenicLocationDesc}
           address={t.Footer.Address}
           phone={t.Footer.Phone}
           email={t.Footer.Email}
@@ -74,6 +91,10 @@ export default async function KontaktPage() {
         address={t.Footer.Address}
         phone={t.Footer.Phone}
         email={t.Footer.Email}
+        quickLinksTitle={t.Footer.QuickLinksTitle}
+        contactAndLegalTitle={t.Footer.ContactAndLegalTitle}
+        copyright={t.Footer.Copyright}
+        craftedWithLove={t.Footer.CraftedWithLove}
       />
     </div>
   );

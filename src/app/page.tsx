@@ -57,11 +57,16 @@ export default async function Home() {
 
       <main className="flex-1">
         <HeroSection
+          experienceBadge={t.HomePage.ExperienceBadge}
           headline={t.HomePage.Headline}
           subheadline={t.HomePage.Subheadline}
           description={t.HomePage.Description}
           primaryCta={t.HomePage.PrimaryCta}
           secondaryCta={t.HomePage.SecondaryCta}
+          trustIndicators={t.HomePage.TrustIndicators}
+          showcaseTag={t.HomePage.ShowcaseTag}
+          showcaseTitle={t.HomePage.ShowcaseTitle}
+          showcaseDescription={t.HomePage.ShowcaseDescription}
         />
         <HighlightsSection
           conceptTag={t.HomePage.ConceptTag}
@@ -73,6 +78,7 @@ export default async function Home() {
           title={t.HomePage.PreviewTitle}
           subtitle={t.HomePage.PreviewSubtitle}
           ctaText={t.HomePage.PreviewCta}
+          prepText={t.MenuPage.FreshlyServedText}
         />
       </main>
 
@@ -87,6 +93,10 @@ export default async function Home() {
         address={t.Footer.Address}
         phone={t.Footer.Phone}
         email={t.Footer.Email}
+        quickLinksTitle={t.Footer.QuickLinksTitle}
+        contactAndLegalTitle={t.Footer.ContactAndLegalTitle}
+        copyright={t.Footer.Copyright}
+        craftedWithLove={t.Footer.CraftedWithLove}
       />
     </div>
   );

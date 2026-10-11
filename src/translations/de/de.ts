@@ -53,8 +53,28 @@ export const DE: ITranslation = {
     Subheadline: "Handgefertigte Törtchen, feinster Barista-Kaffee und herzliche Gastfreundschaft.",
     Description:
       "Lassen Sie die Seele baumeln. In unserem gemütlichen Café direkt an der Seepromenade kreieren wir täglich frische Backkunstwerke und servieren aromatische Kaffeespezialitäten.",
+    ExperienceBadge: "Café & Lounge Erlebnis direkt am Wasser",
     PrimaryCta: "Speisekarte entdecken",
     SecondaryCta: "Tisch anfragen",
+    TrustIndicators: [
+      {
+        title: "Wasserblick",
+        subtitle: "Herrliche Terrasse",
+      },
+      {
+        title: "100%",
+        subtitle: "Handgemacht & Bio",
+        highlight: true,
+      },
+      {
+        title: "Lounge",
+        subtitle: "Stimmungsvoll",
+      },
+    ],
+    ShowcaseTag: "Willkommen in der Auszeit",
+    ShowcaseTitle: "Kaffee, Genuss & Wohlfühlmomente",
+    ShowcaseDescription:
+      "Täglich frisch gerösteter Spezialitätenkaffee und feine Törtchen auf unserer idyllischen Seeterrasse in entspanntem Lounge-Flair.",
     ConceptTag: "Das Konzept",
     ConceptTitle: "Warum die „Süße Auszeit“ begeistert",
     Highlights: [
@@ -100,6 +120,7 @@ export const DE: ITranslation = {
       fruehstueck: "Frühstück & Brunch",
       drinks: "Erfrischungen & Drinks",
     },
+    FreshlyServedText: "Frisch serviert in ca. {prepTime} Min.",
   },
 
   ContactPage: {
@@ -113,6 +134,32 @@ export const DE: ITranslation = {
     },
     Headline: "Öffnungszeiten & Anfahrt",
     Subheadline: "Besuchen Sie uns direkt am Wasser – hier finden Sie alle Details für Ihren Besuch.",
+    OpeningHoursCardTitle: "Öffnungszeiten",
+    OpenNowBadge: "Jetzt geöffnet",
+    ClosedNowBadge: "Derzeit geschlossen",
+    Days: {
+      monday: "Montag",
+      tuesday: "Dienstag",
+      wednesday: "Mittwoch",
+      thursday: "Donnerstag",
+      friday: "Freitag",
+      saturday: "Samstag",
+      sunday: "Sonntag",
+    },
+    ClosedLabel: "Ruhetag",
+    TimeSuffix: "Uhr",
+    LocationCardTitle: "Standort & Kontakt",
+    AddressLabel: "Adresse",
+    WaterfrontHint: "Direkt an der Uferpromenade mit Wasserblick",
+    PhoneLabel: "Telefon",
+    EmailLabel: "E-Mail",
+    CopyAddressButton: "Adresse kopieren",
+    CopiedAddressButton: "Adresse kopiert!",
+    OpenMapsButton: "In Google Maps öffnen",
+    ScenicLocationTag: "Traumhafte Lage",
+    ScenicLocationTitle: "Direkt an der Uferpromenade mit Außenbereich",
+    ScenicLocationDesc:
+      "Parkplätze finden Sie bequem entlang der Promenade. Auch mit dem Fahrrad oder Boot optimal erreichbar.",
   },
 
   AboutPage: {
@@ -228,6 +275,7 @@ export const DE: ITranslation = {
     OpeningHoursWeekdays: "Di – Fr: 09:00 – 18:30 Uhr",
     OpeningHoursWeekend: "Sa & So: 09:30 – 19:00 Uhr (Mo Ruhetag)",
     ContactTitle: "Kontakt & Anfahrt",
+    ContactAndLegalTitle: "Kontakt & Rechtliches",
     Address: "Hafenpromenade 12, Am Wasser",
     Phone: "+49 (0) 123 456 789",
     Email: "hallo@suesse-auszeit.de",
@@ -235,5 +283,6 @@ export const DE: ITranslation = {
     PrivacyLabel: "Datenschutz",
     ImprintLabel: "Impressum",
     Copyright: "Alle Rechte vorbehalten.",
+    CraftedWithLove: "Handgefertigt mit Liebe & Kaffee direkt am Wasser.",
   },
 };

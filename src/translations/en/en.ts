@@ -53,8 +53,28 @@ export const EN: ITranslation = {
     Subheadline: "Artisanal pastries, exquisite barista coffee, and heartwarming hospitality.",
     Description:
       "Take a moment for yourself. In our cozy café directly along the promenade, we bake fresh delicacies daily and craft specialty coffees.",
+    ExperienceBadge: "Café & Lounge Experience Right by the Water",
     PrimaryCta: "Explore Menu",
     SecondaryCta: "Book a Table",
+    TrustIndicators: [
+      {
+        title: "Water Views",
+        subtitle: "Scenic Lake Terrace",
+      },
+      {
+        title: "100%",
+        subtitle: "Handcrafted & Organic",
+        highlight: true,
+      },
+      {
+        title: "Lounge",
+        subtitle: "Atmospheric Vibe",
+      },
+    ],
+    ShowcaseTag: "Welcome to your Timeout",
+    ShowcaseTitle: "Coffee, Delight & Cozy Moments",
+    ShowcaseDescription:
+      "Daily fresh-roasted specialty coffee and exquisite tarts on our idyllic lake terrace in a relaxing lounge atmosphere.",
     ConceptTag: "The Concept",
     ConceptTitle: "Why guests fall in love with Süße Auszeit",
     Highlights: [
@@ -100,6 +120,7 @@ export const EN: ITranslation = {
       fruehstueck: "Breakfast & Brunch",
       drinks: "Drinks & Refreshments",
     },
+    FreshlyServedText: "Freshly served in approx. {prepTime} min.",
   },
 
   ContactPage: {
@@ -112,6 +133,32 @@ export const EN: ITranslation = {
     },
     Headline: "Opening Hours & Directions",
     Subheadline: "Visit us right by the water – here are all the details for your visit.",
+    OpeningHoursCardTitle: "Opening Hours",
+    OpenNowBadge: "Open now",
+    ClosedNowBadge: "Currently closed",
+    Days: {
+      monday: "Monday",
+      tuesday: "Tuesday",
+      wednesday: "Wednesday",
+      thursday: "Thursday",
+      friday: "Friday",
+      saturday: "Saturday",
+      sunday: "Sunday",
+    },
+    ClosedLabel: "Closed",
+    TimeSuffix: "",
+    LocationCardTitle: "Location & Contact",
+    AddressLabel: "Address",
+    WaterfrontHint: "Right on the promenade with water view",
+    PhoneLabel: "Phone",
+    EmailLabel: "Email",
+    CopyAddressButton: "Copy address",
+    CopiedAddressButton: "Address copied!",
+    OpenMapsButton: "Open in Google Maps",
+    ScenicLocationTag: "Scenic Location",
+    ScenicLocationTitle: "Directly on the waterfront promenade with outdoor patio",
+    ScenicLocationDesc:
+      "Parking is conveniently available along the promenade. Also easily accessible by bicycle or boat.",
   },
 
   AboutPage: {
@@ -227,6 +274,7 @@ export const EN: ITranslation = {
     OpeningHoursWeekdays: "Tue – Fri: 09:00 AM – 06:30 PM",
     OpeningHoursWeekend: "Sat & Sun: 09:30 AM – 07:00 PM (Mon Closed)",
     ContactTitle: "Contact & Location",
+    ContactAndLegalTitle: "Contact & Legal",
     Address: "Harbor Promenade 12, Waterfront",
     Phone: "+49 (0) 123 456 789",
     Email: "hello@suesse-auszeit.de",
@@ -234,5 +282,6 @@ export const EN: ITranslation = {
     PrivacyLabel: "Privacy Policy",
     ImprintLabel: "Legal Notice",
     Copyright: "All rights reserved.",
+    CraftedWithLove: "Handcrafted with love & coffee by the water.",
   },
 };

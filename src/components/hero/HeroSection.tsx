@@ -3,19 +3,33 @@ import Image from "next/image";
 import { Sparkles, ArrowRight, CalendarHeart } from "lucide-react";
 
 interface HeroSectionProps {
+  experienceBadge: string;
   headline: string;
   subheadline: string;
   description: string;
   primaryCta: string;
   secondaryCta: string;
+  trustIndicators: Array<{
+    title: string;
+    subtitle: string;
+    highlight?: boolean;
+  }>;
+  showcaseTag: string;
+  showcaseTitle: string;
+  showcaseDescription: string;
 }
 
 export default function HeroSection({
+  experienceBadge,
   headline,
   subheadline,
   description,
   primaryCta,
   secondaryCta,
+  trustIndicators,
+  showcaseTag,
+  showcaseTitle,
+  showcaseDescription,
 }: HeroSectionProps) {
   return (
     <section className="relative overflow-hidden py-16 sm:py-24 lg:py-32">
@@ -30,7 +44,7 @@ export default function HeroSection({
           <div className="lg:col-span-7 flex flex-col items-start space-y-6">
             <div className="inline-flex items-center gap-2 rounded-full border border-pink-500/30 bg-pink-500/10 px-4 py-1.5 text-xs font-semibold text-pink-300">
               <Sparkles className="size-3.5 text-pink-400" />
-              <span>Café & Lounge Erlebnis direkt am Wasser</span>
+              <span>{experienceBadge}</span>
             </div>
 
             <h1 className="font-serif text-4xl sm:text-6xl font-bold tracking-tight text-white leading-[1.12]">
@@ -65,18 +79,18 @@ export default function HeroSection({
 
             {/* Trust indicators */}
             <div className="grid grid-cols-3 gap-6 pt-8 border-t border-stone-800/80 w-full max-w-lg text-stone-300">
-              <div>
-                <span className="block font-serif text-2xl font-bold text-white">Wasserblick</span>
-                <span className="text-xs text-stone-500">Herrliche Terrasse</span>
-              </div>
-              <div>
-                <span className="block font-serif text-2xl font-bold text-pink-400">100%</span>
-                <span className="text-xs text-stone-500">Handgemacht & Bio</span>
-              </div>
-              <div>
-                <span className="block font-serif text-2xl font-bold text-white">Lounge</span>
-                <span className="text-xs text-stone-500">Stimmungsvoll</span>
-              </div>
+              {trustIndicators.map((item) => (
+                <div key={item.title}>
+                  <span
+                    className={`block font-serif text-2xl font-bold ${
+                      item.highlight ? "text-pink-400" : "text-white"
+                    }`}
+                  >
+                    {item.title}
+                  </span>
+                  <span className="text-xs text-stone-500">{item.subtitle}</span>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -105,13 +119,13 @@ export default function HeroSection({
               {/* Subtitle / Bottom Info with Clean Non-Heavy Styling */}
               <div className="p-6 bg-[#121016] border-t border-white/5">
                 <span className="text-[11px] uppercase font-bold tracking-widest text-pink-400">
-                  Willkommen in der Auszeit
+                  {showcaseTag}
                 </span>
                 <h3 className="font-serif text-xl font-bold text-white mt-1">
-                  Kaffee, Genuss & Wohlfühlmomente
+                  {showcaseTitle}
                 </h3>
                 <p className="text-xs text-stone-400 mt-1.5 leading-relaxed">
-                  Täglich frisch gerösteter Spezialitätenkaffee und feine Törtchen auf unserer idyllischen Seeterrasse in entspanntem Lounge-Flair.
+                  {showcaseDescription}
                 </p>
               </div>
             </div>

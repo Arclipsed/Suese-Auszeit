@@ -8,9 +8,10 @@ import { cn } from "@/lib/utils";
 
 interface MenuCategoryViewProps {
   categories?: Record<string, string>;
+  prepText?: string;
 }
 
-export default function MenuCategoryView({ categories }: MenuCategoryViewProps) {
+export default function MenuCategoryView({ categories, prepText }: MenuCategoryViewProps) {
   const [selectedCategory, setSelectedCategory] = useState<string>("alle");
 
   const filteredItems =
@@ -56,6 +57,7 @@ export default function MenuCategoryView({ categories }: MenuCategoryViewProps) 
             prepTimeInMinutes={item.prepTimeInMinutes}
             badge={item.badge}
             isVegetarian={item.isVegetarian}
+            prepText={prepText}
           />
         ))}
       </div>

@@ -2,25 +2,33 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Clock, CheckCircle2, XCircle } from "lucide-react";
+import { Clock } from "lucide-react";
 
-interface DaySchedule {
-  day: string;
-  time: string;
-  isClosed?: boolean;
+interface LiveOpeningHoursCardProps {
+  cardTitle: string;
+  openNowBadge: string;
+  closedNowBadge: string;
+  days: {
+    monday: string;
+    tuesday: string;
+    wednesday: string;
+    thursday: string;
+    friday: string;
+    saturday: string;
+    sunday: string;
+  };
+  closedLabel: string;
+  timeSuffix?: string;
 }
 
-const SCHEDULE: DaySchedule[] = [
-  { day: "Montag", time: "Ruhetag", isClosed: true },
-  { day: "Dienstag", time: "09:00 – 18:30 Uhr" },
-  { day: "Mittwoch", time: "09:00 – 18:30 Uhr" },
-  { day: "Donnerstag", time: "09:00 – 18:30 Uhr" },
-  { day: "Freitag", time: "09:00 – 18:30 Uhr" },
-  { day: "Samstag", time: "09:30 – 19:00 Uhr" },
-  { day: "Sonntag", time: "09:30 – 19:00 Uhr" },
-];
-
-export default function LiveOpeningHoursCard() {
+export default function LiveOpeningHoursCard({
+  cardTitle,
+  openNowBadge,
+  closedNowBadge,
+  days,
+  closedLabel,
+  timeSuffix = "",
+}: LiveOpeningHoursCardProps) {
   const [isOpenNow, setIsOpenNow] = useState<boolean | null>(null);
 
   useEffect(() => {
@@ -43,13 +51,25 @@ export default function LiveOpeningHoursCard() {
     setIsOpenNow(open);
   }, []);
 
+  const suffix = timeSuffix ? ` ${timeSuffix}` : "";
+
+  const schedule = [
+    { day: days.monday, time: closedLabel, isClosed: true },
+    { day: days.tuesday, time: `09:00 – 18:30${suffix}` },
+    { day: days.wednesday, time: `09:00 – 18:30${suffix}` },
+    { day: days.thursday, time: `09:00 – 18:30${suffix}` },
+    { day: days.friday, time: `09:00 – 18:30${suffix}` },
+    { day: days.saturday, time: `09:30 – 19:00${suffix}` },
+    { day: days.sunday, time: `09:30 – 19:00${suffix}` },
+  ];
+
   return (
     <div className="flex flex-col rounded-3xl border border-white/10 bg-[#141217] p-6 sm:p-8 shadow-xl relative overflow-hidden">
       {/* Live Badge */}
       <div className="flex items-center justify-between pb-6 border-b border-white/5">
         <div className="flex items-center gap-2">
           <Clock className="size-5 text-pink-400" />
-          <h3 className="font-serif text-xl font-bold text-white">Öffnungszeiten</h3>
+          <h3 className="font-serif text-xl font-bold text-white">{cardTitle}</h3>
         </div>
 
         {isOpenNow !== null && (
@@ -63,12 +83,12 @@ export default function LiveOpeningHoursCard() {
             {isOpenNow ? (
               <>
                 <span className="size-2 rounded-full bg-emerald-400 animate-pulse" />
-                <span>Jetzt geöffnet</span>
+                <span>{openNowBadge}</span>
               </>
             ) : (
               <>
                 <span className="size-2 rounded-full bg-rose-400" />
-                <span>Derzeit geschlossen</span>
+                <span>{closedNowBadge}</span>
               </>
             )}
           </div>
@@ -77,7 +97,7 @@ export default function LiveOpeningHoursCard() {
 
       {/* Week Table */}
       <div className="space-y-3.5 pt-6">
-        {SCHEDULE.map((item) => (
+        {schedule.map((item) => (
           <div
             key={item.day}
             className="flex items-center justify-between text-sm py-1 border-b border-white/[0.03] last:border-0"
