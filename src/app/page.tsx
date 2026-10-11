@@ -71,7 +71,6 @@ export default async function Home() {
               homeLabel={t.Navigation.HomeLabel}
               menuLabel={t.Navigation.MenuLabel}
               aboutLabel={t.Navigation.AboutLabel}
-              galleryLabel={t.Navigation.GalleryLabel}
               contactLabel={t.Navigation.ContactLabel}
               reserveLabel={t.Navigation.ReserveLabel}
               menuItems={MENU_DROPDOWN_ITEMS}
@@ -86,7 +85,6 @@ export default async function Home() {
           highlight={MENU_HIGHLIGHT}
         />
         <NavigationItem href="#ueber-uns" label={t.Navigation.AboutLabel} />
-        <NavigationItem href="#impressionen" label={t.Navigation.GalleryLabel} />
         <NavigationItem href="#kontakt" label={t.Navigation.ContactLabel} />
       </Navigation>
 
@@ -107,7 +105,6 @@ export default async function Home() {
         homeLabel={t.Navigation.HomeLabel}
         menuLabel={t.Navigation.MenuLabel}
         aboutLabel={t.Navigation.AboutLabel}
-        galleryLabel={t.Navigation.GalleryLabel}
         contactLabel={t.Navigation.ContactLabel}
         privacyLabel={t.Footer.PrivacyLabel}
         imprintLabel={t.Footer.ImprintLabel}

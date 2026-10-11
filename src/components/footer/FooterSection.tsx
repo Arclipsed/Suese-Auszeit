@@ -7,7 +7,6 @@ interface FooterSectionProps {
   homeLabel: string;
   menuLabel: string;
   aboutLabel: string;
-  galleryLabel: string;
   contactLabel: string;
   privacyLabel: string;
   imprintLabel: string;
@@ -21,7 +20,6 @@ export default function FooterSection({
   homeLabel,
   menuLabel,
   aboutLabel,
-  galleryLabel,
   contactLabel,
   privacyLabel,
   imprintLabel,
@@ -53,14 +51,13 @@ export default function FooterSection({
 
   const primaryLinks = [
     { title: homeLabel, href: "/" },
-    { title: menuLabel, href: "#kaffee" },
-    { title: aboutLabel, href: "#ueber-uns" },
-    { title: galleryLabel, href: "#impressionen" },
-    { title: contactLabel, href: "#kontakt" },
+    { title: menuLabel, href: "/speisekarte" },
+    { title: aboutLabel, href: "/#ueber-uns" },
+    { title: contactLabel, href: "/#kontakt" },
   ];
 
   const secondaryLinks = [
-    { title: address, href: "#kontakt" },
+    { title: address, href: "/#kontakt" },
     { title: phone, href: `tel:${phone.replace(/\s+/g, "")}` },
     { title: email, href: `mailto:${email}` },
     { title: privacyLabel, href: "/datenschutz" },

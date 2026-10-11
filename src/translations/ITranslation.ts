@@ -26,6 +26,18 @@ export interface ITranslation {
     AllCategories: string;
   };
 
+  LegalPage: {
+    MetaTags: IMetaTags;
+    Headline: string;
+    Subheadline: string;
+  };
+
+  PrivacyPage: {
+    MetaTags: IMetaTags;
+    Headline: string;
+    Subheadline: string;
+  };
+
   Footer: {
     Tagline: string;
     OpeningHoursTitle: string;

@@ -6,7 +6,7 @@ export const EN: ITranslation = {
     MenuLabel: "Menu",
     AboutLabel: "About Us",
     GalleryLabel: "Impressions",
-    ContactLabel: "Contact & Hours",
+    ContactLabel: "Opening Hours",
     ReserveLabel: "Reserve Table",
   },
 
@@ -39,6 +39,30 @@ export const EN: ITranslation = {
     Headline: "Our Menu",
     Subheadline: "Artisanal masterpieces, specialty coffees, and refreshing signature creations for your sweet break.",
     AllCategories: "All Categories",
+  },
+
+  LegalPage: {
+    MetaTags: {
+      title: "Legal Notice — Süße Auszeit",
+      description: "Legal notice and operator information for Café Süße Auszeit.",
+      imgUrl: "https://suesse-auszeit.example.com/og/home.png",
+      tags: ["Legal Notice", "Süße Auszeit", "Imprint"],
+      url: "https://suesse-auszeit.example.com/impressum",
+    },
+    Headline: "Legal Notice",
+    Subheadline: "Information pursuant to Section 5 TMG",
+  },
+
+  PrivacyPage: {
+    MetaTags: {
+      title: "Privacy Policy — Süße Auszeit",
+      description: "Information about data privacy and how your data is handled.",
+      imgUrl: "https://suesse-auszeit.example.com/og/home.png",
+      tags: ["Privacy Policy", "GDPR", "Süße Auszeit"],
+      url: "https://suesse-auszeit.example.com/datenschutz",
+    },
+    Headline: "Privacy Policy",
+    Subheadline: "Transparency and protection of your personal data under GDPR",
   },
 
   Footer: {

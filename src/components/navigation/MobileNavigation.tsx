@@ -16,7 +16,6 @@ interface MobileNavigationProps {
   homeLabel: string;
   menuLabel: string;
   aboutLabel: string;
-  galleryLabel: string;
   contactLabel: string;
   reserveLabel: string;
   menuItems: MenuItem[];
@@ -26,7 +25,6 @@ export default function MobileNavigation({
   homeLabel,
   menuLabel,
   aboutLabel,
-  galleryLabel,
   contactLabel,
   reserveLabel,
   menuItems,
@@ -112,7 +110,7 @@ export default function MobileNavigation({
 
             {/* Weitere Nav-Links */}
             <Link
-              href="#ueber-uns"
+              href="/#ueber-uns"
               onClick={closeMenu}
               className="flex items-center justify-between rounded-xl p-3 text-base font-semibold text-stone-200 hover:bg-white/5 hover:text-pink-400"
             >
@@ -120,15 +118,7 @@ export default function MobileNavigation({
             </Link>
 
             <Link
-              href="#impressionen"
-              onClick={closeMenu}
-              className="flex items-center justify-between rounded-xl p-3 text-base font-semibold text-stone-200 hover:bg-white/5 hover:text-pink-400"
-            >
-              <span>{galleryLabel}</span>
-            </Link>
-
-            <Link
-              href="#kontakt"
+              href="/#kontakt"
               onClick={closeMenu}
               className="flex items-center justify-between rounded-xl p-3 text-base font-semibold text-stone-200 hover:bg-white/5 hover:text-pink-400"
             >
@@ -138,7 +128,7 @@ export default function MobileNavigation({
             {/* Mobile Call-To-Action Button */}
             <div className="pt-2">
               <Link
-                href="#reservierung"
+                href="/#reservierung"
                 onClick={closeMenu}
                 className="flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-pink-600 to-pink-500 py-3 text-sm font-semibold text-white shadow-[0_0_15px_rgba(255,77,148,0.35)]"
               >
