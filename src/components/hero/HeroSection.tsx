@@ -81,9 +81,9 @@ export default function HeroSection({
           </div>
 
           {/* Visual Showcase Card with Real Cafe Photo */}
-          <div className="lg:col-span-5 relative flex justify-center">
-            <div className="relative w-full max-w-lg rounded-3xl overflow-hidden border border-white/10 bg-[#121016] shadow-xl group">
-              <div className="relative h-[430px] w-full">
+          <div className="lg:col-span-5 relative w-full flex justify-center">
+            <div className="relative w-full max-w-none lg:max-w-lg rounded-3xl overflow-hidden border border-white/10 bg-[#121016] shadow-xl group">
+              <div className="relative h-[320px] sm:h-[420px] lg:h-[450px] w-full">
                 <Image
                   src="/cafe-exterior.jpg"
                   alt="Café Süße Auszeit Außenbereich am Wasser bei Dämmerung"
