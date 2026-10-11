@@ -27,6 +27,20 @@ export const EN: ITranslation = {
     SecondaryCta: "Book a Table",
   },
 
+  MenuPage: {
+    MetaTags: {
+      title: "Menu — Süße Auszeit | Café & Patisserie",
+      description:
+        "Explore our complete menu: specialty barista coffee, handcrafted cakes, savory breakfast bowls, and refreshing signature drinks.",
+      imgUrl: "https://suesse-auszeit.example.com/og/menu.png",
+      tags: ["Menu", "Coffee", "Cakes", "Breakfast", "Patisserie", "Süße Auszeit"],
+      url: "https://suesse-auszeit.example.com/speisekarte",
+    },
+    Headline: "Our Menu",
+    Subheadline: "Artisanal masterpieces, specialty coffees, and refreshing signature creations for your sweet break.",
+    AllCategories: "All Categories",
+  },
+
   Footer: {
     Tagline: "Your destination for specialty coffee, artisan pastries, and vibrant moments right by the water.",
     OpeningHoursTitle: "Opening Hours",

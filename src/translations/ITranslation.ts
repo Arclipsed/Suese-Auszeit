@@ -19,6 +19,13 @@ export interface ITranslation {
     SecondaryCta: string;
   };
 
+  MenuPage: {
+    MetaTags: IMetaTags;
+    Headline: string;
+    Subheadline: string;
+    AllCategories: string;
+  };
+
   Footer: {
     Tagline: string;
     OpeningHoursTitle: string;

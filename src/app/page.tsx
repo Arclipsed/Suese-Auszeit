@@ -10,6 +10,7 @@ import NavigationReserveButton from "@/components/navigation/NavigationReserveBu
 import MobileNavigation from "@/components/navigation/MobileNavigation";
 import HeroSection from "@/components/hero/HeroSection";
 import HighlightsSection from "@/components/highlights/HighlightsSection";
+import MenuPreviewSection from "@/components/menu/MenuPreviewSection";
 import FooterSection from "@/components/footer/FooterSection";
 
 export const instant = false;
@@ -24,24 +25,24 @@ const MENU_DROPDOWN_ITEMS = [
     title: "Kaffee & Barista-Kreationen",
     description: "Espresso, Flat White, Cold Brew und saisonale Kaffee-Spezialitäten.",
     badge: "Bio Bohnen",
-    href: "#kaffee",
+    href: "/speisekarte",
   },
   {
     title: "Torten & Patisserie",
     description: "Täglich frisch gebackene Kuchen, Törtchen und feine Macarons.",
     badge: "Frisch",
-    href: "#kuchen",
+    href: "/speisekarte",
   },
   {
     title: "Frühstück & Brunch",
     description: "Artisan-Brot, Croissants, hausgemachte Aufstriche und Bowls.",
-    href: "#fruehstueck",
+    href: "/speisekarte",
   },
   {
     title: "Erfrischungen & Signature Drinks",
     description: "Pink Dragon Limo, hausgemachte Eistees und Bio-Kräutertees.",
     badge: "Special",
-    href: "#getraenke",
+    href: "/speisekarte",
   },
 ];
 
@@ -49,7 +50,7 @@ const MENU_HIGHLIGHT = {
   tag: "Signature Empfehlung",
   title: "Ruby Rose Latte & Himbeer-Pistazien Törtchen",
   description: "Zartrosa Rote-Bete-Hafer-Latte harmonisch abgestimmt mit samtiger Patisserie.",
-  href: "#signature",
+  href: "/speisekarte",
 };
 
 export default async function Home() {
@@ -98,6 +99,7 @@ export default async function Home() {
           secondaryCta={t.HomePage.SecondaryCta}
         />
         <HighlightsSection />
+        <MenuPreviewSection />
       </main>
 
       <FooterSection
