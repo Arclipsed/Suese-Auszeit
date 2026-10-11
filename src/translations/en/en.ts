@@ -5,8 +5,7 @@ export const EN: ITranslation = {
     HomeLabel: "Home",
     MenuLabel: "Menu",
     AboutLabel: "About Us",
-    GalleryLabel: "Impressions",
-    ContactLabel: "Opening Hours",
+    ContactLabel: "Hours & Location",
     ReserveLabel: "Reserve Table",
   },
 
@@ -39,6 +38,18 @@ export const EN: ITranslation = {
     Headline: "Our Menu",
     Subheadline: "Artisanal masterpieces, specialty coffees, and refreshing signature creations for your sweet break.",
     AllCategories: "All Categories",
+  },
+
+  ContactPage: {
+    MetaTags: {
+      title: "Opening Hours & Location — Café Süße Auszeit",
+      description: "Find our live opening hours, status, and navigation to the waterfront location.",
+      imgUrl: "https://suesse-auszeit.example.com/og/home.png",
+      tags: ["Hours", "Directions", "Address", "Süße Auszeit", "Café"],
+      url: "https://suesse-auszeit.example.com/kontakt",
+    },
+    Headline: "Opening Hours & Directions",
+    Subheadline: "Visit us right by the water – here are all the details for your visit.",
   },
 
   LegalPage: {

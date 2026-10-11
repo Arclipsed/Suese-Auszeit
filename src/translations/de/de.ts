@@ -5,8 +5,7 @@ export const DE: ITranslation = {
     HomeLabel: "Startseite",
     MenuLabel: "Speisekarte",
     AboutLabel: "Über uns",
-    GalleryLabel: "Impressionen",
-    ContactLabel: "Öffnungszeiten",
+    ContactLabel: "Öffnungszeiten & Anfahrt",
     ReserveLabel: "Tisch reservieren",
   },
 
@@ -39,6 +38,19 @@ export const DE: ITranslation = {
     Headline: "Unsere Speisekarte",
     Subheadline: "Handgefertigte Meisterwerke, Spezialitätenkaffee und erfrischende Kreationen für Ihre Auszeit.",
     AllCategories: "Alle Kategorien",
+  },
+
+  ContactPage: {
+    MetaTags: {
+      title: "Öffnungszeiten & Anfahrt — Café Süße Auszeit",
+      description:
+        "Finden Sie unsere aktuellen Öffnungszeiten, Live-Status und Anfahrtsinformationen mit Routenplaner direkt zur Hafenpromenade.",
+      imgUrl: "https://suesse-auszeit.example.com/og/home.png",
+      tags: ["Öffnungszeiten", "Anfahrt", "Adresse", "Süße Auszeit", "Café"],
+      url: "https://suesse-auszeit.example.com/kontakt",
+    },
+    Headline: "Öffnungszeiten & Anfahrt",
+    Subheadline: "Besuchen Sie uns direkt am Wasser – hier finden Sie alle Details für Ihren Besuch.",
   },
 
   LegalPage: {

@@ -38,7 +38,7 @@ export default function MobileNavigation({
   };
 
   return (
-    <div className="md:hidden flex items-center">
+    <div className="flex min-[1000px]:hidden items-center">
       {/* Hamburger Trigger Button */}
       <button
         type="button"

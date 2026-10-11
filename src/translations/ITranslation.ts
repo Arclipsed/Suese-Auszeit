@@ -5,7 +5,6 @@ export interface ITranslation {
     HomeLabel: string;
     MenuLabel: string;
     AboutLabel: string;
-    GalleryLabel: string;
     ContactLabel: string;
     ReserveLabel: string;
   };
@@ -24,6 +23,12 @@ export interface ITranslation {
     Headline: string;
     Subheadline: string;
     AllCategories: string;
+  };
+
+  ContactPage: {
+    MetaTags: IMetaTags;
+    Headline: string;
+    Subheadline: string;
   };
 
   LegalPage: {

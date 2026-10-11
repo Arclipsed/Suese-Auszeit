@@ -11,6 +11,7 @@ import MobileNavigation from "@/components/navigation/MobileNavigation";
 import HeroSection from "@/components/hero/HeroSection";
 import HighlightsSection from "@/components/highlights/HighlightsSection";
 import MenuPreviewSection from "@/components/menu/MenuPreviewSection";
+import ContactSection from "@/components/contact/ContactSection";
 import FooterSection from "@/components/footer/FooterSection";
 
 export const instant = false;
@@ -98,6 +99,13 @@ export default async function Home() {
         />
         <HighlightsSection />
         <MenuPreviewSection />
+        <ContactSection
+          headline={t.ContactPage.Headline}
+          subheadline={t.ContactPage.Subheadline}
+          address={t.Footer.Address}
+          phone={t.Footer.Phone}
+          email={t.Footer.Email}
+        />
       </main>
 
       <FooterSection
