@@ -195,7 +195,7 @@ export const EN: ITranslation = {
       },
       {
         tag: "Atmosphere & Design",
-        title: "Cozy Lounge Vibe with Neon Accents",
+        title: "Cozy Lounge Vibe",
         subtitle: "Stylish interior to unwind, relax, and savor",
         description:
           "Our interior welcomes you with warm ambient lighting, glowing neon accents, and modern lounge comfort. Whether you seek shelter from brisk coastal breezes or wish to conclude an evening stroll along the harbor, you'll find your perfect cozy spot here.",

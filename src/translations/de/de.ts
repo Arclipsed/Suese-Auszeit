@@ -196,7 +196,7 @@ export const DE: ITranslation = {
       },
       {
         tag: "Atmosphäre & Design",
-        title: "Gemütliches Lounge-Flair mit Neon-Akzenten",
+        title: "Gemütliches Lounge-Flair",
         subtitle: "Stilvoller Innenbereich zum Wohlfühlen, Verweilen und Genießen",
         description:
           "Unser Innenbereich empfängt dich mit stimmungsvoller Beleuchtung, warmen Akzenten und modernen Lounge-Elementen. Ob ein gemütlicher Nachmittag bei Schietwetter oder ein entspannter Abend nach einem Spaziergang am Hafen – hier findest du deinen perfekten Wohlfühlort.",
