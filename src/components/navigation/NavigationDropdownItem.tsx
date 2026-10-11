@@ -36,14 +36,14 @@ export default function NavigationDropdownItem({
       <NavigationMenuContent>
         <div className="grid w-[420px] md:w-[540px] grid-cols-1 md:grid-cols-2 gap-2 p-3">
           {highlight && (
-            <div className="col-span-1 md:col-span-2 mb-2 p-3.5 rounded-xl bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200/70">
-              <span className="text-[10px] uppercase font-bold tracking-wider text-amber-800">
+            <div className="col-span-1 md:col-span-2 mb-2 p-3.5 rounded-xl bg-gradient-to-r from-pink-950/40 to-purple-950/30 border border-pink-500/30 shadow-[0_0_20px_rgba(255,77,148,0.15)]">
+              <span className="text-[10px] uppercase font-bold tracking-wider text-pink-400">
                 {highlight.tag}
               </span>
-              <h4 className="text-sm font-semibold text-stone-900 mt-0.5">
+              <h4 className="text-sm font-semibold text-white mt-0.5">
                 {highlight.title}
               </h4>
-              <p className="text-xs text-stone-600 mt-1">
+              <p className="text-xs text-stone-300 mt-1">
                 {highlight.description}
               </p>
             </div>

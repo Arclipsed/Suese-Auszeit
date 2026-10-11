@@ -23,7 +23,7 @@ export default function NavigationItem({
             href={href}
             className={cn(
               navigationMenuTriggerStyle(),
-              isActive && "font-semibold text-stone-900 bg-stone-100"
+              isActive && "font-semibold text-pink-400 bg-pink-500/10 shadow-[0_0_12px_rgba(255,77,148,0.2)]"
             )}
           >
             {label}

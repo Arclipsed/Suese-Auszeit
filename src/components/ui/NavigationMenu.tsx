@@ -53,7 +53,7 @@ export function NavigationMenuItem({
 }
 
 export const navigationMenuTriggerStyle = cva(
-  "group inline-flex h-10 w-max items-center justify-center rounded-full bg-transparent px-4 py-2 text-sm font-medium text-stone-700 hover:bg-stone-100/80 hover:text-stone-900 focus:bg-stone-100 focus:text-stone-900 disabled:pointer-events-none disabled:opacity-50 data-[popup-open]:bg-stone-100 data-[popup-open]:text-stone-900 focus-visible:ring-ring/50 outline-none transition-[color,background-color,box-shadow]"
+  "group inline-flex h-10 w-max items-center justify-center rounded-full bg-transparent px-4 py-2 text-sm font-medium text-stone-300 hover:bg-white/5 hover:text-pink-300 focus:bg-white/10 focus:text-pink-300 disabled:pointer-events-none disabled:opacity-50 data-[popup-open]:bg-white/10 data-[popup-open]:text-pink-300 outline-none transition-[color,background-color,box-shadow]"
 );
 
 export function NavigationMenuTrigger({
@@ -69,7 +69,7 @@ export function NavigationMenuTrigger({
     >
       {children}{" "}
       <ChevronDownIcon
-        className="relative top-[1px] ms-1.5 size-3.5 transition duration-300 group-data-[popup-open]:rotate-180 text-stone-500"
+        className="relative top-[1px] ms-1.5 size-3.5 transition duration-300 group-data-[popup-open]:rotate-180 text-stone-400 group-hover:text-pink-400"
         aria-hidden="true"
       />
     </NavigationMenuPrimitive.Trigger>
@@ -142,7 +142,7 @@ export function NavigationMenuPopup({
   return (
     <NavigationMenuPrimitive.Popup
       className={cn(
-        "data-[ending-style]:easing-[ease] relative h-[var(--popup-height)] origin-[var(--transform-origin)] rounded-2xl bg-white/95 backdrop-blur-md shadow-xl border border-stone-200/80 transition-[opacity,transform,width,height,scale,translate] duration-[var(--duration)] ease-[var(--easing)] data-[ending-style]:scale-95 data-[ending-style]:opacity-0 data-[ending-style]:duration-150 data-[starting-style]:scale-95 data-[starting-style]:opacity-0 w-[var(--popup-width)] xs:w-[var(--popup-width)]",
+        "data-[ending-style]:easing-[ease] relative h-[var(--popup-height)] origin-[var(--transform-origin)] rounded-2xl bg-[#141217]/95 backdrop-blur-xl shadow-2xl border border-pink-500/20 transition-[opacity,transform,width,height,scale,translate] duration-[var(--duration)] ease-[var(--easing)] data-[ending-style]:scale-95 data-[ending-style]:opacity-0 data-[ending-style]:duration-150 data-[starting-style]:scale-95 data-[starting-style]:opacity-0 w-[var(--popup-width)] xs:w-[var(--popup-width)]",
         className
       )}
       {...props}
@@ -173,7 +173,7 @@ export function NavigationMenuLink({
     <NavigationMenuPrimitive.Link
       data-slot="navigation-menu-link"
       className={cn(
-        "data-[active]:focus:bg-stone-100 data-[active]:hover:bg-stone-100 data-[active]:bg-stone-100/70 hover:bg-stone-100/80 focus:bg-stone-100 flex flex-col gap-1 rounded-xl p-3 text-sm transition-all outline-none focus-visible:ring-2 focus-visible:ring-stone-400 cursor-pointer",
+        "data-[active]:focus:bg-white/10 data-[active]:hover:bg-white/10 data-[active]:bg-white/5 hover:bg-white/5 focus:bg-white/10 flex flex-col gap-1 rounded-xl p-3 text-sm transition-all outline-none cursor-pointer",
         className
       )}
       {...props}

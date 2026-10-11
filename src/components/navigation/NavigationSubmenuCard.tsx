@@ -21,19 +21,19 @@ export default function NavigationSubmenuCard({
       render={
         <Link
           href={href}
-          className="group block select-none rounded-xl p-3 leading-none no-underline outline-none transition-colors hover:bg-stone-100/80 focus:bg-stone-100"
+          className="group block select-none rounded-xl p-3 leading-none no-underline outline-none transition-colors hover:bg-white/5 focus:bg-white/10 border border-transparent hover:border-pink-500/20"
         >
           <div className="flex items-center justify-between mb-1.5">
-            <span className="text-sm font-semibold text-stone-900 group-hover:text-amber-800 transition-colors">
+            <span className="text-sm font-semibold text-stone-200 group-hover:text-pink-300 transition-colors">
               {title}
             </span>
             {badge && (
-              <span className="text-[10px] font-medium tracking-wide uppercase px-2 py-0.5 rounded-full bg-amber-100 text-amber-900 border border-amber-200">
+              <span className="text-[10px] font-medium tracking-wide uppercase px-2 py-0.5 rounded-full bg-pink-500/15 text-pink-300 border border-pink-500/30">
                 {badge}
               </span>
             )}
           </div>
-          <p className="text-xs text-stone-500 leading-relaxed line-clamp-2">
+          <p className="text-xs text-stone-400 leading-relaxed line-clamp-2">
             {description}
           </p>
         </Link>

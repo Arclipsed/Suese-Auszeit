@@ -36,29 +36,30 @@ const MENU_DROPDOWN_ITEMS = [
     href: "#fruehstueck",
   },
   {
-    title: "Erfrischungen & Tees",
-    description: "Bio-Limonaden, frisch gepresste Säfte und Bio-Kräutertees.",
+    title: "Erfrischungen & Signature Drinks",
+    description: "Pink Dragon Limo, hausgemachte Eistees und Bio-Kräutertees.",
+    badge: "Special",
     href: "#getraenke",
   },
 ];
 
 const MENU_HIGHLIGHT = {
-  tag: "Empfehlung des Hauses",
-  title: "Hausgemachte Pistazientorte & Hafer-Cappuccino",
-  description: "Cremige Füllung mit 100% sizilianischer Pistazie und samtiger Milchschaum.",
-  href: "#empfehlung",
+  tag: "Signature Empfehlung",
+  title: "Ruby Rose Latte & Himbeer-Pistazien Törtchen",
+  description: "Zartrosa Rote-Bete-Hafer-Latte harmonisch abgestimmt mit samtiger Patisserie.",
+  href: "#signature",
 };
 
 export default async function Home() {
   const t = await TranslationService.GetUserTranslations();
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#fdfbf7] text-stone-900 selection:bg-amber-200">
+    <div className="min-h-screen flex flex-col bg-[#0d0c0e] text-stone-100 selection:bg-pink-500 selection:text-white">
       <Navigation
-        logo={<NavigationLogo cafeName="Süße Auszeit" tagline="Café & Patisserie" />}
+        logo={<NavigationLogo cafeName="Süße Auszeit" tagline="Café & Lounge" />}
         actions={
           <>
-            <NavigationVerticalLine className="hidden sm:block h-5 w-px bg-stone-300" />
+            <NavigationVerticalLine className="hidden sm:block h-5 w-px bg-stone-800" />
             <NavigationReserveButton label={t.Navigation.ReserveLabel} href="#reservierung" />
           </>
         }
