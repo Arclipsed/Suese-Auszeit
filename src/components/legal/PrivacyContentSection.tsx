@@ -41,9 +41,9 @@ export default function PrivacyContentSection({ headline, subheadline }: Privacy
           <h2 className="font-serif text-xl font-bold text-white">2. Verantwortliche Stelle</h2>
           <p>
             Verantwortlich für die Datenverarbeitung auf dieser Website ist:<br />
-            Café Süße Auszeit<br />
-            Hafenpromenade 12, 12345 Musterstadt<br />
-            E-Mail: datenschutz@suesse-auszeit.de
+            Süße Auszeit – Hafencafé Eckernförde<br />
+            Schiffbrücke 10, 24340 Eckernförde<br />
+            E-Mail: info@hafencafe-eckernfoerde.de
           </p>
         </section>
 

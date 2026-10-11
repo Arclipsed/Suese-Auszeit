@@ -6,7 +6,10 @@ interface LegalContentSectionProps {
   subheadline: string;
 }
 
-export default function LegalContentSection({ headline, subheadline }: LegalContentSectionProps) {
+export default function LegalContentSection({
+  headline,
+  subheadline,
+}: LegalContentSectionProps) {
   return (
     <article className="max-w-3xl mx-auto py-12 px-4 sm:px-6">
       <Link
@@ -31,32 +34,32 @@ export default function LegalContentSection({ headline, subheadline }: LegalCont
 
       <div className="space-y-8 text-stone-300 text-sm sm:text-base leading-relaxed">
         <section className="space-y-3">
-          <h2 className="font-serif text-xl font-bold text-white">Angaben gemäß § 5 TMG</h2>
-          <p>
-            Café Süße Auszeit<br />
-            Hafenpromenade 12<br />
-            12345 Musterstadt am Wasser
-          </p>
-        </section>
-
-        <section className="space-y-3">
-          <h2 className="font-serif text-xl font-bold text-white">Vertreten durch</h2>
-          <p>Inhaber: Max Mustermann</p>
+          <h2 className="font-serif text-xl font-bold text-white">Angaben gemäß § 5 DDG</h2>
+          <address className="not-italic leading-relaxed">
+            Süße Auszeit – Hafencafé Eckernförde<br />
+            Schiffbrücke 10<br />
+            24340 Eckernförde
+          </address>
         </section>
 
         <section className="space-y-3">
           <h2 className="font-serif text-xl font-bold text-white">Kontakt</h2>
           <p>
-            Telefon: +49 (0) 123 456 789<br />
-            E-Mail: hallo@suesse-auszeit.de
+            E-Mail:{" "}
+            <a
+              href="mailto:info@hafencafe-eckernfoerde.de"
+              className="text-pink-400 hover:underline"
+            >
+              info@hafencafe-eckernfoerde.de
+            </a>
           </p>
         </section>
 
         <section className="space-y-3">
-          <h2 className="font-serif text-xl font-bold text-white">Umsatzsteuer-ID</h2>
+          <h2 className="font-serif text-xl font-bold text-white">Verbraucherstreitbeilegung</h2>
           <p>
-            Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br />
-            DE 123 456 789
+            Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
+            Verbraucherschlichtungsstelle teilzunehmen.
           </p>
         </section>
 
@@ -78,10 +81,9 @@ export default function LegalContentSection({ headline, subheadline }: LegalCont
         </section>
 
         <section className="space-y-3">
-          <h2 className="font-serif text-xl font-bold text-white">Verbraucherstreitbeilegung</h2>
-          <p>
-            Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
-            Verbraucherschlichtungsstelle teilzunehmen.
+          <h2 className="font-serif text-xl font-bold text-white">Bild- & Schriftnachweise</h2>
+          <p className="text-sm text-stone-400">
+            Schriften: Dancing Script und Nunito (SIL Open Font License).
           </p>
         </section>
       </div>
